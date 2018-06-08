@@ -1,0 +1,70 @@
+;; Object skgdb/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "skgdb/"
+  :tables
+  (list
+    (semanticdb-table "Options.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("STARKNOWLEDGEGRAPH_OPTIONS_HPP" variable (:constant-flag t) nil [87 117])
+            ("cstdio" include (:system-flag t) nil [119 136])
+            ("fmt/format.h" include nil nil [138 161])
+            ("util/cmdopts.hpp" include nil nil [162 189])
+            ("skg" type
+               (:members 
+                  ( ("Options" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [231 238])
+                            ("Options" function
+                               (:constructor-flag t
+                                :type ("Options" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [247 555])
+                            ("public" label nil (reparse-symbol classsubparts) [560 567])
+                            ("mem_buffer_mb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [600 621])
+                            ("shard_size_mb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [654 675])
+                            ("shard_split_factor" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [719 746])
+                            ("private" label nil (reparse-symbol classsubparts) [752 760])
+                            ("shard_init_per" variable (:type "float") (reparse-symbol classsubparts) [854 875])
+                            ("public" label nil (reparse-symbol classsubparts) [880 887])
+                            ("init_shard_size_mb" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [896 1013])
+                            ("create_if_missing" variable (:type "bool") (reparse-symbol classsubparts) [1116 1139])
+                            ("error_if_exists" variable (:type "bool") (reparse-symbol classsubparts) [1246 1267])
+                            ("default_table_dir" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1277 1307])
+                            ("GetTableDir" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1347 1371]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1316 1455])
+                            ("GetTablePath" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1496 1520]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1464 1610])
+                            ("public" label nil (reparse-symbol classsubparts) [1616 1623])
+                            ("SetByCmdOptions" function (:type "void") (reparse-symbol classsubparts) [1632 2256]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [211 2263]))                  
+                :type "namespace")
+                nil [191 2265]))          
+      :file "Options.hpp"
+      :pointmax 2307
+      :fsize 2402
+      :lastmodtime '(23243 19799 279151 110000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("STARKNOWLEDGEGRAPH_OPTIONS_HPP")
+          )
+))
+  :file "!home!tommydu!code_root!StarKnowledgeGraph!include!skgdb!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

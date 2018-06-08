@@ -1,0 +1,895 @@
+;; Object zhufu_helper_recv/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "zhufu_helper_recv/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("/usr/local/commlib/Makefile.comm" include nil nil [1 42])
+            ("CUR_USR" variable (:default-value ("`whoami`")) nil [43 60])
+            ("BINARY" variable (:default-value ("zhufu_helper_recv")) nil [60 87])
+            ("OUTLIB" variable nil nil [87 97])
+            ("MY_INC" variable (:default-value ("-I/home/$(CUR_USR)/code_root/c2cmsg_com_proj/trunk" "-I/home/$(CUR_USR)/code_root/general_component_proj/trunk/limited_exe" "-I/home/$(CUR_USR)/code_root/general_component_proj/trunk/hash_template" "-I/home/$(CUR_USR)/code_root/general_component_proj/trunk/XDByteStream" "-I/home/$(CUR_USR)/code_root/general_component_proj/trunk/hit_query_center" "-I../protocol/" "-I../im_proto/" "-I../oidirty_api/api" "$(INCCOMMNOMYSQL)")) nil [97 554])
+            ("LIB_PROTOBUF" variable (:default-value ("`pkg-config --libs protobuf`")) nil [572 614])
+            ("MY_LIB" variable (:default-value ("-L/home/$(CUR_USR)/code_root/c2cmsg_com_proj/trunk" "-lc2cmsg_common" "-L/home/$(CUR_USR)/code_root/general_component_proj/trunk/XDByteStream" "-lXDByteStream_api" "-L../oidirty_api/api" "-lr_api_15000" "../im_proto/libim_proto.a" "../protocol/libprotocol.a" "-ltconv_g2u" "$(LIBCOMMNOMYSQL)" "$(LIBSRV_FRAMEWORK)" "$(LIB_PROTOBUF)")) nil [615 964])
+            ("C_ARGS" variable (:default-value ("-g" "-Wall" "-DINMYSQL_STMT" "-DMFP_EPOLL" "-D_LARGEFILE_SOURCE" "-DRELEASE" "-D_FILE_OFFSET_BITS=64")) nil [981 1090])
+            ("VPATH" variable nil nil [1090 1099])
+            (".SUFFIXES" function (:arguments (".o" ".cpp")) nil [1100 1119])
+            ("CXX" variable (:default-value ("g++")) nil [1120 1130])
+            ("CC" variable (:default-value ("gcc")) nil [1130 1139])
+            (".cpp.o" function nil nil [1139 1290])
+            (".c.o" function nil nil [1291 1437])
+            ("all" function (:arguments ("$(BINARY)" "$(OUTLIB)")) nil [1438 1462])
+            ("zhufu_helper_recv" function (:arguments ("zhufu_helper_recv.o" "sensitive_uin.o")) nil [1463 1705])
+            ("clean" function nil nil [1762 1800]))          
+      :file "Makefile"
+      :pointmax 1800
+      :fsize 1799
+      :lastmodtime '(23096 47189 0 0)
+      :unmatched-syntax '((shell-command 1770 . 1799) (bol 1769 . 1769) (shell-command 965 . 980) (bol 964 . 964) (shell-command 555 . 570) (bol 554 . 554)))
+    (semanticdb-table "sensitive_uin.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__SENSITIVE_UIN_H__" variable (:constant-flag t) nil [37 56])
+            ("stdint.h" include (:system-flag t) nil [57 75])
+            ("InitSensitiveUin" function
+               (:prototype-flag t
+                :type "int")
+                nil [78 101])
+            ("IsSensitiveUin" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122 137]))                  
+                :type "bool")
+                nil [102 138]))          
+      :file "sensitive_uin.h"
+      :pointmax 149
+      :fsize 148
+      :lastmodtime '(23096 47189 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__SENSITIVE_UIN_H__")
+          )
+)
+    (semanticdb-table "sensitive_uin.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("set" include (:system-flag t) nil [1 15])
+            ("sensitive_uin.h" include nil nil [16 42])
+            ("gs_SensitiveUinArray" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    71921437UL,
+    10015UL,
+    10068UL,
+    10091UL,
+    10138UL,
+    10159UL,
+    10160UL,
+    10176UL,
+    10181UL,
+    10194UL,
+    10254UL,
+    18981UL,
+    22342UL,
+    28332UL,
+    29421UL,
+    42827UL,
+    51660UL,
+    63503UL,
+    121505UL,
+    147381UL,
+    164215UL,
+    239117UL,
+    391438UL,
+    391698UL,
+    400555UL,
+    413761UL,
+    419417UL,
+    420787UL,
+    498303UL,
+    512760UL,
+    588414UL,
+    596584UL,
+    624939UL,
+    644909UL,
+    683693UL,
+    711029UL,
+    798365UL,
+    806756UL,
+    848460UL,
+    850258UL,
+    850763UL,
+    859915UL,
+    861186UL,
+    866517UL,
+    866620UL,
+    867330UL,
+    989666UL,
+    1077088UL,
+    1215758UL,
+    1337927UL,
+    1664205UL,
+    1917198UL,
+    2152311UL,
+    2281937UL,
+    2899363UL,
+    3051637UL,
+    3537463UL,
+    3860075UL,
+    4066820UL,
+    4277986UL,
+    4281717UL,
+    4704652UL,
+    5153657UL,
+    5747160UL,
+    5832249UL,
+    5976424UL,
+    6045921UL,
+    7120005UL,
+    7354982UL,
+    7366377UL,
+    7944811UL,
+    8194642UL,
+    8538762UL,
+    9528474UL,
+    10384179UL,
+    10886903UL,
+    11173458UL,
+    11922799UL,
+    12118691UL,
+    12131805UL,
+    12930805UL,
+    13276450UL,
+    13965030UL,
+    15036729UL,
+    15225097UL,
+    16594292UL,
+    16731323UL,
+    16980229UL,
+    17887886UL,
+    19009169UL,
+    19730528UL,
+    20011485UL,
+    22000254UL,
+    22580762UL,
+    22801112UL,
+    24268909UL,
+    24872998UL,
+    24987041UL,
+    29994233UL,
+    32949668UL,
+    33524025UL,
+    35163098UL,
+    37745522UL,
+    38757420UL,
+    42821188UL,
+    43210260UL,
+    43248215UL,
+    45373620UL,
+    46119068UL,
+    47681781UL,
+    47814481UL,
+    49610677UL,
+    53605566UL,
+    53903902UL,
+    57351972UL,
+    59009179UL,
+    59294474UL,
+    63839812UL,
+    64711513UL,
+    65211188UL,
+    66779667UL,
+    67495113UL,
+    68368003UL,
+    68676563UL,
+    75995215UL,
+    76183582UL,
+    78718903UL,
+    79267777UL,
+    80000125UL,
+    80000525UL,
+    80000571UL,
+    80000931UL,
+    80000967UL,
+    82318866UL,
+    82834257UL,
+    84006875UL,
+    85736655UL,
+    86530234UL,
+    86663656UL,
+    87767520UL,
+    88790531UL,
+    88881026UL,
+    88881138UL,
+    88881141UL,
+    88881155UL,
+    88881181UL,
+    88881369UL,
+    88881375UL,
+    88881578UL,
+    88884381UL,
+    88884481UL,
+    88885039UL,
+    88885528UL,
+    93351111UL,
+    93515938UL,
+    99845436UL,
+    99966606UL,
+    119562626UL,
+    120182570UL,
+    124657192UL,
+    130197864UL,
+    138233711UL,
+    139097010UL,
+    150169438UL,
+    151361936UL,
+    151600600UL,
+    159898729UL,
+    164856794UL,
+    167168169UL,
+    172441708UL,
+    182238430UL,
+    184570470UL,
+    188605730UL,
+    191863115UL,
+    200738807UL,
+    206612345UL,
+    229250005UL,
+    251360662UL,
+    254114338UL,
+    262325660UL,
+    267443319UL,
+    267478618UL,
+    287244521UL,
+    289958336UL,
+    296758161UL,
+    330601230UL,
+    346429891UL,
+    346699929UL,
+    359698888UL,
+    382814934UL,
+    392537212UL,
+    399999999UL,
+    415909191UL,
+    434840169UL,
+    435381148UL,
+    446885919UL,
+    447203887UL,
+    451157975UL,
+    452059954UL,
+    453565453UL,
+    460211289UL,
+    462438256UL,
+    462439608UL,
+    466299149UL,
+    466321773UL,
+    468881600UL,
+    489126666UL,
+    503540442UL,
+    518810117UL,
+    542245351UL,
+    569600551UL,
+    584001604UL,
+    592013262UL,
+    612850888UL,
+    615014499UL,
+    656650031UL,
+    674603647UL,
+    719287897UL,
+    822990051UL,
+    847506107UL,
+    867956190UL,
+    905732270UL,
+    908518712UL,
+    910879614UL,
+    918658875UL,
+    931521880UL,
+    938881574UL,
+    1045968155UL,
+    1127694876UL,
+    1151114098UL,
+    1270318963UL,
+    1352347712UL,
+    1409444519UL,
+    1463361266UL,
+    1470536004UL,
+    1607760876UL,
+    1768127232UL,
+    1785979871UL,
+    1928738609UL,
+    1930191311UL,
+    1956982063UL,
+    1974754800UL,
+    2059460848UL,
+    2354742307UL,
+    2402711959UL,
+    2410577489UL,
+    2480964030UL,
+    2556646501UL,
+    2557747810UL,
+    2560915748UL,
+    2663177805UL,
+    2736184070UL,
+    2765633810UL,
+    2861427642UL,
+    2919764001UL,
+    2968984239UL,
+    3092911081UL,
+}"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [45 4196])
+            ("gs_SensitiveUinSet" variable
+               (:typemodifiers ("static")
+                :type ("std::set" type
+                     (:template-specifier 
+                        ( ("uint32_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4199 4244])
+            ("InitSensitiveUin" function (:type "int") nil [4247 4453])
+            ("IsSensitiveUin" function
+               (:arguments 
+                  ( ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4476 4491]))                  
+                :type "bool")
+                nil [4456 4614]))          
+      :file "sensitive_uin.cpp"
+      :pointmax 4616
+      :fsize 4615
+      :lastmodtime '(23096 47189 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "zhufu_helper_common.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ZHUFU_HELPER_COMMON_H__" variable (:constant-flag t) nil [43 68])
+            ("stdint.h" include (:system-flag t) nil [70 89])
+            ("hash_template.h" include nil nil [90 116])
+            ("IpElem" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwIp" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [154 168])
+                          ("dwSetTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [173 192])
+                          ("dwMsgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [197 215])
+                          ("dwVideoMsgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [237 260])
+                          ("dwNoImeiMsgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [273 297])
+                          ("dwNumMsgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [312 333])
+                          ("dwUrlMsgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [346 367])
+                          ("dwTxYangMsgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [380 404])
+                          ("dwTxUnactiveMsgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [419 447])
+                          ("dwTxFeedbackMsgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [462 490])
+                          ("sReserved" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [505 524]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [134 534])
+            ("IP_HASH_TIME" variable (:constant-flag t) nil [558 570])
+            ("IP_HASH_LEN" variable (:constant-flag t) nil [582 593])
+            ("IP_HASH_SHMKEY" variable (:constant-flag t) nil [610 624])
+            ("IpHashTable" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("IpElem" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("1000000")
+                          ("30"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [635 711])
+            ("OfficialUinElem" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [749 764])
+                          ("dwSetTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [769 788])
+                          ("dwIp" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [793 807]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [729 826])
+            ("OFFICIAL_UIN_HASH_TIME" variable (:constant-flag t) nil [850 872])
+            ("OFFICIAL_UIN_HASH_LEN" variable (:constant-flag t) nil [884 905])
+            ("OFFICIAL_UIN_HASH_SHMKEY" variable (:constant-flag t) nil [921 945])
+            ("OfficialUinHashTable" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("OfficialUinElem" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("200000")
+                          ("30"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [956 1070]))          
+      :file "zhufu_helper_common.h"
+      :pointmax 1079
+      :fsize 1127
+      :lastmodtime '(23096 47189 0 0)
+      :unmatched-syntax '((semantic-list 839 . 841) (symbol 835 . 839) (symbol 828 . 834) (punctuation 827 . 828) (semantic-list 725 . 728) (symbol 721 . 725) (number 726 . 727) (symbol 714 . 720) (number 726 . 727) (punctuation 713 . 714) (semantic-list 547 . 549) (symbol 543 . 547) (symbol 536 . 542) (punctuation 535 . 536) (semantic-list 130 . 133) (symbol 126 . 130) (number 131 . 132) (symbol 119 . 125) (number 131 . 132) (punctuation 118 . 119) (semantic-list 130 . 133) (symbol 126 . 130) (number 131 . 132) (symbol 119 . 125) (number 131 . 132) (punctuation 118 . 119))
+      :lexical-table 
+        '(("IP_HASH_TIME" . ((number "30" 571 . 573)))
+          ("IP_HASH_LEN" . ((number "1000000" 594 . 601)))
+          ("OFFICIAL_UIN_HASH_TIME" . ((number "30" 873 . 875)))
+          ("IP_HASH_SHMKEY" . ((number "0x3700100" 625 . 634)))
+          ("OFFICIAL_UIN_HASH_SHMKEY" . ((number "0x3700101" 946 . 955)))
+          ("OFFICIAL_UIN_HASH_LEN" . ((number "200000" 906 . 912)))
+          ("__ZHUFU_HELPER_COMMON_H__")
+          )
+)
+    (semanticdb-table "zhufu_helper_recv.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [344 366])
+            ("unistd.h" include (:system-flag t) nil [367 386])
+            ("stdlib.h" include (:system-flag t) nil [387 406])
+            ("signal.h" include (:system-flag t) nil [484 503])
+            ("regex.h" include (:system-flag t) nil [568 586])
+            ("c2cmsg_comm.h" include nil nil [612 636])
+            ("base_tools.h" include nil nil [637 660])
+            ("base_func.h" include nil nil [661 683])
+            ("zhufu_helper_common.h" include nil nil [684 716])
+            ("limited_exe.h" include nil nil [717 741])
+            ("scintf.pb.h" include nil nil [742 764])
+            ("scdata.pb.h" include nil nil [765 787])
+            ("zhufu_body.pb.h" include nil nil [788 814])
+            ("official_client_req.pb.h" include nil nil [815 850])
+            ("zhufu_helper_log2db.pb.h" include nil nil [851 886])
+            ("oi_acbm_region_class.h" include nil nil [887 920])
+            ("XDByteStream_api.h" include nil nil [921 950])
+            ("sensitive_uin.h" include nil nil [951 977])
+            ("hit_report_api.h" include nil nil [978 1005])
+            ("common.h" include nil nil [1046 1069])
+            ("oi_cfg.h" include nil nil [1070 1093])
+            ("oi_log.h" include nil nil [1094 1117])
+            ("oi_str2.h" include nil nil [1118 1142])
+            ("oi_misc.h" include nil nil [1143 1167])
+            ("tconv_g2u.h" include nil nil [1223 1249])
+            ("Attr_API.h" include nil nil [1250 1275])
+            ("srv_framework.h" include nil nil [1276 1306])
+            ("lib_net.h" include nil nil [1307 1331])
+            ("__STDC_FORMAT_MACROS" variable (:constant-flag t) nil [1399 1419])
+            ("inttypes.h" include (:system-flag t) nil [1427 1448])
+            ("_LOG_SYS_" variable (:constant-flag t) nil [1458 1467])
+            ("_LOG_DEBUG_" variable (:constant-flag t) nil [1495 1506])
+            ("_LOG_UPDATE_" variable (:constant-flag t) nil [1530 1542])
+            ("BAD_UDP_IP" variable (:constant-flag t) nil [1566 1576])
+            ("BAD_UDP_PORT" variable (:constant-flag t) nil [1595 1607])
+            ("DEFAULT_UDP_LISTEN_IP" variable (:constant-flag t) nil [1618 1639])
+            ("DEFAULT_UDP_LISTEN_PORT" variable (:constant-flag t) nil [1659 1682])
+            ("DEFAULT_CLEAR_NODE_NUM" variable (:constant-flag t) nil [1704 1726])
+            ("MAX_PROCESS_PORT_NUM" variable (:constant-flag t) nil [1741 1761])
+            ("DFT_NULL_PORT" variable (:constant-flag t) nil [1775 1788])
+            ("DEFAULT_LOCAL_CONFIG_FILE" variable (:constant-flag t) nil [1804 1829])
+            ("DEFAULT_LOCAL_LOG_PREFIX" variable (:constant-flag t) nil [1863 1887])
+            ("UDP_NAME_VALUE" type
+               (:members 
+                  ( ("UDPNAME_START" variable
+                       (:constant-flag t
+                        :default-value (1949 1950)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1935 1950])
+                    ("UDPNAME_ZHUFU_PKG" variable
+                       (:constant-flag t
+                        :default-value (1974 1987)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1956 1987])
+                    ("UDPNAME_OFFICIAL_CLIENT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1993 2017])
+                    ("UDPNAME_UNDEFINE3" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2022 2040])
+                    ("UDPNAME_UNDEFINE4" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2045 2063])
+                    ("NULL_UDPNAME" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2068 2081]))                  
+                :type "enum")
+                nil [1910 2084])
+            ("USED_UDP_NAME" variable (:constant-flag t) nil [2093 2106])
+            ("g_aszSubDirs" variable
+               (:pointer 1
+                :dereference 1
+                :constant-flag t
+                :default-value "{
+    \"log\",
+    \"data\",
+    \"data/txt\",
+    NULL,
+}"
+                :type "char")
+                nil [2109 2189])
+            ("NUM_SEQ_FLAG" type
+               (:members 
+                  ( ("NUM_SEQ_FLAG_BANK" variable
+                       (:constant-flag t
+                        :default-value (2247 2251)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2229 2251])
+                    ("NUM_SEQ_FLAG_CELL" variable
+                       (:constant-flag t
+                        :default-value (2275 2279)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2257 2279]))                  
+                :type "enum")
+                nil [2206 2283])
+            ("cs1" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("0x20101028UL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2320 2333]))                  
+                :type ("CAcbmRegion_Dirty_Check" type (:type "class") nil nil))
+                nil [2285 2334])
+            ("R_CONFIG" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("szHomeDir" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2370 2395])
+                          ("szLogFilePath" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2400 2429])
+                          ("szLogFilePrefix" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2434 2465])
+                          ("szConfFilePath" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2470 2500])
+                          ("iLogLevel" variable (:type "int") (reparse-symbol classsubparts) [2505 2519])
+                          ("iMaxLogSize" variable (:type "int") (reparse-symbol classsubparts) [2524 2540])
+                          ("iMaxLogNum" variable (:type "int") (reparse-symbol classsubparts) [2545 2560])
+                          ("lCurTime" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2565 2581])
+                          ("stDebugLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2591 2610])
+                          ("stErrorLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2642])
+                          ("stEventLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2656 2675])
+                          ("iClearNodeNum" variable (:type "int") (reparse-symbol classsubparts) [2681 2699])
+                          ("iProcessStartNum" variable (:type "int") (reparse-symbol classsubparts) [2705 2726])
+                          ("iProcessCnt" variable (:type "int") (reparse-symbol classsubparts) [2754 2770])
+                          ("iProcessNum" variable (:type "int") (reparse-symbol classsubparts) [2802 2818])
+                          ("iPortNumPerProc" variable (:type "int") (reparse-symbol classsubparts) [2853 2873])
+                          ("iTotalProcessCnt" variable (:type "int") (reparse-symbol classsubparts) [2878 2899])
+                          ("pCurCnt" variable
+                             (:pointer 1
+                              :type ("uint32_t" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2905 2923])
+                          ("wNullPort" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2929 2948])
+                          ("stLocalAddrList" variable
+                             (:dereference 1
+                              :type ("sockaddr_in" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2965 3015])
+                          ("UrlReg" variable (:type ("regex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3021 3036])
+                          ("MobilePhoneReg" variable (:type ("regex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3041 3064])
+                          ("iNumSeqSetLen" variable (:type "int") (reparse-symbol classsubparts) [3070 3088])
+                          ("aNumSeqSet" variable
+                             (:dereference 2
+                              :type "char")
+                              (reparse-symbol classsubparts) [3093 3137])
+                          ("stIpHashTable" variable (:type ("IpHashTable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3143 3169])
+                          ("stOfficialUinHashTable" variable (:type ("OfficialUinHashTable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3174 3218])
+                          ("CXDByteStream" variable (:type ("xd_byte::CXDByteStream_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3226 3265]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2336 3280])
+            ("g_stConfig" variable (:type ("R_CONFIG" type (:type "class") nil nil)) nil [3282 3302])
+            ("g_userinfolen" variable
+               (:constant-flag t
+                :default-value "1"
+                :type "int")
+                nil [3356 3384])
+            ("gs_iShutDwonFlag" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [3385 3417])
+            ("gs_iReadConf" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [3419 3447])
+            ("CheckDirs" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [3494 3904])
+            ("IsHaveUrl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("szBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3927 3941]))                  
+                :type "int")
+                nil [3906 4168])
+            ("IsMobilePhoneNum" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("szMobile" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4198 4213]))                  
+                :type "int")
+                nil [4170 4449])
+            ("IsHaveNumSeq" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pCur" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4475 4487])
+                    ("piNumSeq" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4488 4503]))                  
+                :type "int")
+                nil [4451 5197])
+            ("HandleAccept" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5223 5238])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5239 5255])
+                    ("iListenAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [5256 5276]))                  
+                :type "int")
+                nil [5199 5537])
+            ("HandlePkgHead" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5614 5629])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5630 5646])
+                    ("iAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [5647 5661])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5662 5673])
+                    ("iBytesRecved" variable (:type "int") (reparse-symbol arg-sub-list) [5674 5691])
+                    ("piPkgLen" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5692 5706]))                  
+                :type "int")
+                nil [5589 5780])
+            ("HandlePkg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5871 5886])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5887 5903])
+                    ("iAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [5904 5918])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5919 5930])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [5931 5943]))                  
+                :type "int")
+                nil [5850 6786])
+            ("WalkHash" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6808 6813]))                  
+                :type "int")
+                nil [6788 6831])
+            ("ReadConf" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [6832 7095])
+            ("ReturnZhufuPkg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7123 7138])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7139 7155])
+                    ("pOrigPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7156 7171])
+                    ("iOrigPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [7172 7188])
+                    ("cHitResult" variable (:type "char") (reparse-symbol arg-sub-list) [7189 7205])
+                    ("stHead" variable
+                       (:reference 1
+                        :type ("sc_bsplat::ScHeader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7208 7236])
+                    ("stSecData" variable
+                       (:reference 1
+                        :type ("sc_bsplat::ScData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7239 7268])
+                    ("stPubPart" variable
+                       (:reference 1
+                        :type ("sc_bsplat::PubPart" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7271 7301])
+                    ("stBody" variable
+                       (:reference 1
+                        :type ("tencent::im::zhufuhelper::Body" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7304 7343]))                  
+                :type "int")
+                nil [7097 10259])
+            ("HandleOfficialClientPkg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10295 10310])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10311 10327])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10328 10339])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [10340 10352]))                  
+                :type "int")
+                nil [10260 11799])
+            ("SendToLogServer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("stData" variable (:type ("tencent::imsec::ZhufuHelperData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11830 11869]))                  
+                :type "int")
+                nil [11801 12405])
+            ("HandleZhufuPkg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12479 12494])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12495 12511])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12512 12523])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [12524 12536])
+                    ("cHitResult" variable
+                       (:reference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12537 12554])
+                    ("stHead" variable
+                       (:reference 1
+                        :type ("sc_bsplat::ScHeader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12557 12585])
+                    ("stSecData" variable
+                       (:reference 1
+                        :type ("sc_bsplat::ScData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12588 12617])
+                    ("stPubPart" variable
+                       (:reference 1
+                        :type ("sc_bsplat::PubPart" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12620 12650])
+                    ("stBody" variable
+                       (:reference 1
+                        :type ("tencent::im::zhufuhelper::Body" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12653 12692]))                  
+                :type "int")
+                nil [12453 29164])
+            ("HandleUdpPkg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29246 29261])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29262 29278])
+                    ("iUdpName" variable (:type "int") (reparse-symbol arg-sub-list) [29279 29292])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29293 29304])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [29305 29317]))                  
+                :type "int")
+                nil [29222 31735])
+            ("HandleCloseConn" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31764 31778])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [31779 31795])
+                    ("iAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [31796 31810])
+                    ("sErrInfo" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31811 31826]))                  
+                :type "int")
+                nil [31737 32048])
+            ("HandleLoop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [32102 32107]))                  
+                :type "int")
+                nil [32080 32684])
+            ("SetShutDownFlag" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [32714 32724]))                  
+                :type "void")
+                nil [32686 32933])
+            ("Init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [32973 32982])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32983 32996]))                  
+                :type "int")
+                nil [32957 41879])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [41890 41899])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [41900 41913]))                  
+                :type "int")
+                nil [41881 42156]))          
+      :file "zhufu_helper_recv.cpp"
+      :pointmax 42157
+      :fsize 42949
+      :lastmodtime '(23096 47189 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_PROCESS_PORT_NUM" . ((number "5" 1765 . 1766)))
+          ("_LOG_DEBUG_" . ((number "0x2" 1509 . 1512)))
+          ("BAD_UDP_IP" . ((string "\"0.0.0.0\"" 1577 . 1586)))
+          ("DFT_NULL_PORT" . ((number "28888" 1789 . 1794)))
+          ("DEFAULT_LOCAL_LOG_PREFIX" . ((string "\"zhufu_helper_recv\"" 1888 . 1907)))
+          ("_LOG_SYS_" . ((number "0x1" 1472 . 1475)))
+          ("BAD_UDP_PORT" . ((number "0" 1608 . 1609)))
+          ("__STDC_FORMAT_MACROS")
+          ("DEFAULT_UDP_LISTEN_PORT" . ((symbol "BAD_UDP_PORT" 1683 . 1695)))
+          ("DEFAULT_UDP_LISTEN_IP" . ((symbol "BAD_UDP_IP" 1640 . 1650)))
+          ("DEFAULT_CLEAR_NODE_NUM" . ((number "2000" 1728 . 1732)))
+          ("DEFAULT_LOCAL_CONFIG_FILE" . ((string "\"zhufu_helper_recv.conf\"" 1830 . 1854)))
+          ("_LOG_UPDATE_" . ((number "0x4" 1544 . 1547)))
+          ("USED_UDP_NAME" . ((number "2" 2107 . 2108)))
+          )
+))
+  :file "!drive_e!code_root!imsec_zhufu_helper_proj!trunk!zhufu_helper_recv!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

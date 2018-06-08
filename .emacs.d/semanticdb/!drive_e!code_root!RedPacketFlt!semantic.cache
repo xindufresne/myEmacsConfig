@@ -1,0 +1,1689 @@
+;; Object RedPacketFlt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "RedPacketFlt/"
+  :tables
+  (list
+    (semanticdb-table "makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("/usr/local/commlib/Makefile.comm" include nil nil [1 42])
+            ("CUR_USR" variable (:default-value ("`whoami`")) nil [43 60])
+            ("CODE_ROOT" variable (:default-value ("/home/$(CUR_USR)/code_root")) nil [60 97])
+            ("BINARY" variable (:default-value ("RedPktReqFwd" "RedPktUINPrcs" "RedPktIMEIPrcs" "sendPkt_test")) nil [98 236])
+            ("LIBSRV_FRAMEWORK" variable (:default-value ("-L$(COMMDIR)/srv_framework" "-lsrv_framework")) nil [237 297])
+            ("LIB_COMM" variable (:default-value ("$(LIBCOMMNOMYSQL)" "$(LIBSRV_FRAMEWORK)" "-L/home/$(CUR_USR)/code_root/general_component_proj/trunk/utility" "-lUtility" "-L./" "-llogsys_client" "-L./protocol" "-lprotocol" "-L/home/$(CUR_USR)/code_root/general_component_proj/trunk/ipdb" "-lipdb_api" "./search_ip_api/lib/libsearchip64.a")) nil [297 594])
+            ("INC_COMM_DIR" variable (:default-value ("$(INCCOMMNOMYSQL)" "-I/home/$(CUR_USR)/code_root/general_component_proj/trunk/utility" "-I./cmlb_v2_client_api/" "-I/home/$(CUR_USR)/code_root/general_component_proj/trunk/3rdlib/l5_tlinux64/" "-I/home/$(CUR_USR)/code_root/general_component_proj/trunk/limited_exe/" "-I./protocol" "-I/home/$(CUR_USR)/code_root/general_component_proj/trunk/ipdb/" "-I./search_ip_api/include/")) nil [595 1002])
+            ("C_ARGS" variable (:default-value ("-g" "-Wall" "-DINMYSQL_STMT" "-DMFP_EPOLL" "-D_LARGEFILE_SOURCE" "-D_FILE_OFFSET_BITS=64" "-DRELEASE1")) nil [1003 1102])
+            ("CXX" variable (:default-value ("g++")) nil [1102 1112])
+            ("CC" variable (:default-value ("gcc")) nil [1112 1121])
+            (".cpp.o" function nil nil [1122 1171])
+            (".c.o" function nil nil [1171 1214])
+            ("lalala" function (:arguments ("$(BINARY)")) nil [1215 1233])
+            ("RedPktReqFwd" function (:arguments ("FwdRedReqPkt.o" "l5_util.o")) nil [1234 1426])
+            ("WLQQInfoFwd" function (:arguments ("WLQQInfoFwd.o")) nil [1426 1502])
+            ("RedPktUINPrcs" function (:arguments ("RedPktUINPrcs.o" "StoreFile.o")) nil [1502 1604])
+            ("ShuayishuaUINPrcs" function (:arguments ("ShuayishuaUINPrcs.o")) nil [1604 1703])
+            ("RedPktIMEIPrcs" function (:arguments ("RedPktIMEIPrcs.o")) nil [1703 1795])
+            ("RedPktIPPrcs" function (:arguments ("RedPktIPPrcs.o")) nil [1795 1874])
+            ("sendPkt_test" function (:arguments ("sendPkt_test.o")) nil [1912 2040])
+            ("CftPktRecv" function (:arguments ("CftPktRecv.o" "l5_util.o" "head.pb.o")) nil [2101 2280])
+            ("RecvPersionSendHB" function (:arguments ("RecvPersionSendHB.o")) nil [2330 2407])
+            ("clean" function nil nil [2408 2435]))          
+      :file "makefile"
+      :pointmax 2435
+      :fsize 2542
+      :lastmodtime '(23117 38909 0 0)
+      :unmatched-syntax '((shell-command 2416 . 2435) (bol 2415 . 2415) (symbol 653 . 700) (semantic-list 644 . 653) (punctuation 643 . 644) (symbol 635 . 643) (semantic-list 612 . 628) (punctuation 611 . 612) (punctuation 608 . 609) (symbol 595 . 607) (bol 595 . 595)))
+    (semanticdb-table "FwdRedReqPkt.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [316 335])
+            ("sys/types.h" include (:system-flag t) nil [336 358])
+            ("unistd.h" include (:system-flag t) nil [359 378])
+            ("stdlib.h" include (:system-flag t) nil [379 398])
+            ("sys/socket.h" include (:system-flag t) nil [399 422])
+            ("netinet/in.h" include (:system-flag t) nil [423 446])
+            ("arpa/inet.h" include (:system-flag t) nil [447 469])
+            ("signal.h" include (:system-flag t) nil [470 489])
+            ("stdio.h" include (:system-flag t) nil [490 508])
+            ("string.h" include (:system-flag t) nil [509 528])
+            ("stdarg.h" include (:system-flag t) nil [529 548])
+            ("netdb.h" include (:system-flag t) nil [549 567])
+            ("time.h" include (:system-flag t) nil [568 585])
+            ("sys/ioctl.h" include (:system-flag t) nil [586 608])
+            ("net/if.h" include (:system-flag t) nil [609 628])
+            ("pack_audit.pb.h" include nil nil [629 655])
+            ("personal_recv_redpkt_fwd.pb.h" include nil nil [656 696])
+            ("common.h" include nil nil [738 761])
+            ("struct.h" include nil nil [762 785])
+            ("oi_cfg.h" include nil nil [786 809])
+            ("oi_log.h" include nil nil [810 833])
+            ("oi_str2.h" include nil nil [834 858])
+            ("oi_misc.h" include nil nil [859 883])
+            ("oi_str.h" include nil nil [884 907])
+            ("lib_utils.h" include nil nil [908 934])
+            ("lib_net.h" include nil nil [935 959])
+            ("Attr_API.h" include nil nil [960 985])
+            ("srv_framework.h" include nil nil [986 1016])
+            ("tconv_g2u.h" include nil nil [1017 1043])
+            ("lib_md5.h" include nil nil [1044 1068])
+            ("string" include (:system-flag t) nil [1099 1116])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1117 1137])
+            ("Utility.h" include nil nil [1139 1159])
+            ("RedPktComm.h" include nil nil [1160 1183])
+            ("FwdRedReqPkt.h" include nil nil [1184 1209])
+            ("logsys_client.h" include nil nil [1210 1236])
+            ("lbs_secure.pb.h" include nil nil [1237 1263])
+            ("oidb_head.pb.h" include nil nil [1264 1289])
+            ("l5_util.h" include nil nil [1290 1310])
+            ("CONFIG_FILE" variable (:constant-flag t) nil [1320 1331])
+            ("LOG_PATH" variable (:constant-flag t) nil [1374 1382])
+            ("REDPKT_FWD_PRCS_LOG" variable (:constant-flag t) nil [1444 1463])
+            ("STX_C" variable (:constant-flag t) nil [1518 1523])
+            ("ETX_C" variable (:constant-flag t) nil [1537 1542])
+            ("MIN_OIDB_PKG_LEN" variable (:constant-flag t) nil [1556 1572])
+            ("gs_iShutDwonFlag" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [1616 1648])
+            ("g_fwdPktCfg" variable
+               (:typemodifiers ("static")
+                :type ("stFwdPktCfg" type (:type "class") nil nil))
+                nil [1649 1680])
+            ("pCfg" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "&g_fwdPktCfg"
+                :type ("stFwdPktCfg" type (:type "class") nil nil))
+                nil [1681 1719])
+            ("ErrorLog" variable (:constant-flag t) nil [1729 1737])
+            ("EventLog" variable (:constant-flag t) nil [1827 1835])
+            ("CUR_TIME" variable (:constant-flag t) nil [1926 1934])
+            ("InitCacheShm" function (:type "int") nil [1973 2012])
+            ("WalkHash" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [2014 2077])
+            ("FwdPkt2UINPrcs" function
+               (:arguments 
+                  ( ("pFwd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("stOneRedPktFwd" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2195 2222])
+                    ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2223 2238]))                  
+                :type "void")
+                nil [2175 3552])
+            ("FwdPkt2IPPrcs" function
+               (:arguments 
+                  ( ("pFwd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("stOneRedPktFwd" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3675 3702])
+                    ("dwIP" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3703 3717]))                  
+                :type "void")
+                nil [3656 4955])
+            ("FwdARPacket" function
+               (:arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4982 4996])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4997 5008])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [5009 5021]))                  
+                :type "int")
+                nil [4966 6916])
+            ("FwdStarPacket" function
+               (:arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6943 6957])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6958 6969])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [6970 6982]))                  
+                :type "int")
+                nil [6925 8270])
+            ("FwdRedPacket" function
+               (:arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9084 9098])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9099 9110])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [9111 9123]))                  
+                :type "int")
+                nil [9067 11639])
+            ("HandleUdpPkg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12055 12069])
+                    ("pCInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12070 12083])
+                    ("iUdpName" variable (:type "int") (reparse-symbol arg-sub-list) [12084 12097])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12098 12109])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [12110 12122]))                  
+                :type "int")
+                nil [12031 12520])
+            ("HandleLoop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12575 12580]))                  
+                :type "int")
+                nil [12553 12786])
+            ("SetShutDownFlag" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [12816 12826]))                  
+                :type "void")
+                nil [12788 12966])
+            ("ReadConfig" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [12968 15349])
+            ("InitAllLogFile" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [15362 16809])
+            ("HandleAccept" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16835 16849])
+                    ("pCInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16850 16863])
+                    ("iListenAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [16864 16884]))                  
+                :type "int")
+                nil [16811 16902])
+            ("HandlePkgHead" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16929 16943])
+                    ("pCInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16944 16957])
+                    ("iAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [16958 16972])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16973 16984])
+                    ("iBytesRecved" variable (:type "int") (reparse-symbol arg-sub-list) [16985 17002])
+                    ("piPkgLen" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [17003 17017]))                  
+                :type "int")
+                nil [16904 17035])
+            ("HandlePkg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17057 17071])
+                    ("pCInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17072 17085])
+                    ("iAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [17086 17100])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17101 17112])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [17113 17125]))                  
+                :type "int")
+                nil [17036 17143])
+            ("HandleCloseConn" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17171 17185])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17186 17202])
+                    ("iAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [17203 17217])
+                    ("sErrInfo" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17218 17233]))                  
+                :type "int")
+                nil [17144 17251])
+            ("Init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [17290 17299])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17300 17313]))                  
+                :type "int")
+                nil [17274 18865])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [18876 18885])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18886 18899]))                  
+                :type "int")
+                nil [18867 19338]))          
+      :file "FwdRedReqPkt.cpp"
+      :pointmax 19339
+      :fsize 20238
+      :lastmodtime '(23117 38908 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MIN_OIDB_PKG_LEN" . ((semantic-list "(1+2*4+1)" 1573 . 1582)))
+          ("CUR_TIME" . ((semantic-list "(pCfg->dwCurTime)" 1935 . 1952)))
+          ("ETX_C" . ((number "0x29" 1543 . 1547)))
+          ("REDPKT_FWD_PRCS_LOG" . ((string "\"/usr/local/services/RedPktReqFwd-1.0/log/\"" 1465 . 1508)))
+          ("STX_C" . ((number "0x28" 1524 . 1528)))
+          ("LOG_PATH" . ((string "\"/usr/local/services/RedPktReqFwd-1.0/log/\"" 1392 . 1435)))
+          ("ErrorLog" (spp-arg-list ("_fmt_" "_args_...") 1737 . 1755) . 
+              ((DO "do" 1756 . 1758) (semantic-list "{ Log(&(pCfg->stErrorLog), 2, _fmt_, ## _args_); }" 1758 . 1808) (WHILE "while" 1809 . 1814) (semantic-list "(0)" 1815 . 1818)))
+          ("CONFIG_FILE" . ((string "\"../conf/RedPacketFwd.conf\"" 1338 . 1365)))
+          ("EventLog" (spp-arg-list ("_fmt_" "_args_...") 1835 . 1853) . 
+              ((DO "do" 1854 . 1856) (semantic-list "{ Log(&(pCfg->stEventLog), 2, _fmt_, ## _args_); }" 1856 . 1906) (WHILE "while" 1907 . 1912) (semantic-list "(0)" 1913 . 1916)))
+          )
+)
+    (semanticdb-table "RedPktComm.h"
+      :file "RedPktComm.h"
+      :fsize 8851
+      :lastmodtime '(23117 38909 0 0))
+    (semanticdb-table "FwdRedReqPkt.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_FWD_RED_REQ_PKT_H_" variable (:constant-flag t) nil [37 56])
+            ("arpa/inet.h" include (:system-flag t) nil [59 81])
+            ("lib_utils.h" include nil nil [123 145])
+            ("common.h" include nil nil [146 165])
+            ("struct.h" include nil nil [166 185])
+            ("oi_shm.h" include nil nil [186 205])
+            ("oi_log.h" include nil nil [206 225])
+            ("oi_cfg.h" include nil nil [226 245])
+            ("oi_misc.h" include nil nil [246 266])
+            ("oi_pkg.h" include nil nil [267 286])
+            ("Attr_API.h" include nil nil [287 308])
+            ("MAX_PATH_LEN" variable (:constant-flag t) nil [346 358])
+            ("MAX_IP_STRING_LEN" variable (:constant-flag t) nil [378 395])
+            ("USER_INFO_LEN" variable (:constant-flag t) nil [409 422])
+            ("MAX_MAC_NUM" variable (:constant-flag t) nil [450 461])
+            ("stFwdPktCfg" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("szLocalIP" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [510 536])
+                          ("listen_port" variable (:type ("int16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [541 565])
+                          ("recv_star_port" variable (:type ("int16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [570 597])
+                          ("recv_ar_port" variable (:type ("int16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [599 623])
+                          ("szLogFilePath" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [647 687])
+                          ("iMaxLogSize" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [692 716])
+                          ("iMaxLogNum" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [721 744])
+                          ("iLogLevel" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [749 771])
+                          ("stErrorLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [777 800])
+                          ("stEventLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [802 825])
+                          ("iMchNum" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [888 908])
+                          ("stUINAddr" variable
+                             (:dereference 1
+                              :type ("sockaddr_in" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil))
+                              (reparse-symbol classsubparts) [945 988])
+                          ("stIPAddr" variable
+                             (:dereference 1
+                              :type ("sockaddr_in" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil))
+                              (reparse-symbol classsubparts) [1009 1051])
+                          ("stIMEIAddr" variable
+                             (:dereference 1
+                              :type ("sockaddr_in" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil))
+                              (reparse-symbol classsubparts) [1069 1113])
+                          ("dwCurTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1157 1179]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [468 1194])
+            ("SVRFRAME_LISTEN_PORT_NAME" type
+               (:members 
+                  ( ("PORT_NAME1" variable
+                       (:constant-flag t
+                        :default-value (1246 1249)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1233 1249])
+                    ("PORT_NAME2" variable
+                       (:constant-flag t
+                        :default-value (1268 1271)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1255 1271])
+                    ("PORT_NAME3" variable
+                       (:constant-flag t
+                        :default-value (1290 1293)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1277 1293]))                  
+                :type "enum")
+                nil [1196 1297])
+            ("NTOHL" variable (:constant-flag t) nil [1307 1312])
+            ("NTOHS" variable (:constant-flag t) nil [1357 1362])
+            ("ERRSTR" variable (:constant-flag t) nil [1409 1415])
+            ("MAX_PROCESS_PORT_NUM" variable (:constant-flag t) nil [1441 1461])
+            ("MAX" variable (:constant-flag t) nil [1489 1492])
+            ("MIN" variable (:constant-flag t) nil [1545 1548])
+            ("stRedPktPluginCheck" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("cSTX" variable (:type "char") (reparse-symbol classsubparts) [1616 1628])
+                          ("dwReqLen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1630 1648])
+                          ("sPbRedPacketReq" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1650 1675])
+                          ("HTON" function (:type "void") (reparse-symbol classsubparts) [1699 1747])
+                          ("NTOH" function (:type "void") (reparse-symbol classsubparts) [1752 1800]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1598 1823]))          
+      :file "FwdRedReqPkt.h"
+      :pointmax 1903
+      :fsize 2108
+      :lastmodtime '(23117 38909 0 0)
+      :unmatched-syntax '((semantic-list 1887 . 1889) (symbol 1883 . 1887) (symbol 1876 . 1882) (punctuation 1875 . 1876) (semantic-list 1592 . 1595) (symbol 1588 . 1592) (number 1593 . 1594) (symbol 1581 . 1587) (number 1593 . 1594) (punctuation 1580 . 1581))
+      :lexical-table 
+        '(("MAX_IP_STRING_LEN" . ((number "64" 398 . 400)))
+          ("MAX_PROCESS_PORT_NUM" . ((semantic-list "(5)" 1462 . 1465)))
+          ("MAX" (spp-arg-list ("a" "b") 1492 . 1497) . ((semantic-list "((a)>=(b)?(a):(b))" 1498 . 1516)))
+          ("NTOHS" (spp-arg-list ("x") 1362 . 1365) . ((symbol "ntohs" 1369 . 1374) (semantic-list "(*((unsigned short*)(x)))" 1374 . 1399)))
+          ("ERRSTR" . ((symbol "strerror" 1416 . 1424) (semantic-list "(errno)" 1424 . 1431)))
+          ("MIN" (spp-arg-list ("a" "b") 1548 . 1553) . ((semantic-list "((a)<(b)?(a):(b))" 1554 . 1571)))
+          ("_FWD_RED_REQ_PKT_H_")
+          ("MAX_PATH_LEN" . ((number "256" 366 . 369)))
+          ("MAX_MAC_NUM" . ((semantic-list "(40)" 462 . 466)))
+          ("NTOHL" (spp-arg-list ("x") 1312 . 1315) . ((symbol "ntohl" 1319 . 1324) (semantic-list "(*((unsigned long*)(x)))" 1324 . 1348)))
+          ("USER_INFO_LEN" . ((semantic-list "(10)" 423 . 427)))
+          )
+)
+    (semanticdb-table "logsys_client.h"
+      :file "logsys_client.h"
+      :fsize 15115
+      :lastmodtime '(23117 38909 0 0))
+    (semanticdb-table "l5_util.h"
+      :file "l5_util.h"
+      :fsize 699
+      :lastmodtime '(23117 38909 0 0))
+    (semanticdb-table "CftPktRecv.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [279 298])
+            ("sys/types.h" include (:system-flag t) nil [299 321])
+            ("unistd.h" include (:system-flag t) nil [322 341])
+            ("stdlib.h" include (:system-flag t) nil [342 361])
+            ("sys/socket.h" include (:system-flag t) nil [362 385])
+            ("netinet/in.h" include (:system-flag t) nil [386 409])
+            ("arpa/inet.h" include (:system-flag t) nil [410 432])
+            ("signal.h" include (:system-flag t) nil [433 452])
+            ("stdio.h" include (:system-flag t) nil [453 471])
+            ("string.h" include (:system-flag t) nil [472 491])
+            ("stdarg.h" include (:system-flag t) nil [492 511])
+            ("netdb.h" include (:system-flag t) nil [512 530])
+            ("time.h" include (:system-flag t) nil [531 548])
+            ("sys/ioctl.h" include (:system-flag t) nil [549 571])
+            ("net/if.h" include (:system-flag t) nil [572 591])
+            ("map" include (:system-flag t) nil [593 607])
+            ("string" include (:system-flag t) nil [608 625])
+            ("iostream" include (:system-flag t) nil [626 645])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [646 666])
+            ("imsec_lock_uin.pb.h" include nil nil [668 698])
+            ("personal_recv_redpkt_fwd.pb.h" include nil nil [699 739])
+            ("eye_push_channel.pb.h" include nil nil [740 772])
+            ("head.pb.h" include nil nil [773 793])
+            ("Cmd0x35c.pb.h" include nil nil [794 818])
+            ("uinbsplat.pb.h" include nil nil [819 844])
+            ("common.h" include nil nil [887 910])
+            ("struct.h" include nil nil [911 931])
+            ("oi_cfg.h" include nil nil [932 955])
+            ("oi_log.h" include nil nil [956 979])
+            ("oi_str2.h" include nil nil [980 1004])
+            ("oi_misc.h" include nil nil [1005 1029])
+            ("oi_str.h" include nil nil [1030 1053])
+            ("lib_utils.h" include nil nil [1054 1080])
+            ("lib_net.h" include nil nil [1081 1102])
+            ("Attr_API.h" include nil nil [1103 1128])
+            ("srv_framework.h" include nil nil [1129 1159])
+            ("tconv_g2u.h" include nil nil [1160 1186])
+            ("lib_md5.h" include nil nil [1187 1211])
+            ("Utility.h" include nil nil [1242 1262])
+            ("CftPktRecv.h" include nil nil [1263 1286])
+            ("hash_define.h" include nil nil [1287 1311])
+            ("MblCheckRslt.h" include nil nil [1312 1337])
+            ("l5_util.h" include nil nil [1338 1358])
+            ("CONFIG_FILE" variable (:constant-flag t) nil [1371 1382])
+            ("LOG_PATH" variable (:constant-flag t) nil [1437 1445])
+            ("gs_iShutDwonFlag" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [1474 1506])
+            ("g_CftPktRecvCfg" variable
+               (:typemodifiers ("static")
+                :type ("stCftPktRecvCfg" type (:type "class") nil nil))
+                nil [1507 1546])
+            ("pCfg" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "&g_CftPktRecvCfg"
+                :type ("stCftPktRecvCfg" type (:type "class") nil nil))
+                nil [1547 1593])
+            ("SimuLgHashTab" variable
+               (:typemodifiers ("static")
+                :type ("SimuLgHashTable_T" type (:type "class") nil nil))
+                nil [1596 1635])
+            ("PInUINHashTab" variable
+               (:typemodifiers ("static")
+                :type ("PIN_UINHashTable_T" type (:type "class") nil nil))
+                nil [1636 1676])
+            ("tencent::security::redpacket" using (:type ("tencent::security::redpacket" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1677 1722])
+            ("ErrorLog" variable (:constant-flag t) nil [1734 1742])
+            ("EventLog" variable (:constant-flag t) nil [1832 1840])
+            ("FBDLog" variable (:constant-flag t) nil [1930 1936])
+            ("ARKickLog" variable (:constant-flag t) nil [2030 2039])
+            ("CUR_TIME" variable (:constant-flag t) nil [2133 2141])
+            ("ForbidUINHB" function
+               (:prototype-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2184 2199]))                  
+                :type "void")
+                nil [2160 2200])
+            ("KickUinWithOption" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2230 2245]))                  
+                :type "int")
+                nil [2201 2246])
+            ("InitCacheShm" function (:type "int") nil [2266 2728])
+            ("WalkHash" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [2730 2790])
+            ("ClsDwnUIN" function
+               (:arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2806 2821]))                  
+                :type "int")
+                nil [2792 3634])
+            ("DisablePluginHongbao" function
+               (:arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3692 3707]))                  
+                :type "int")
+                nil [3667 4507])
+            ("KickUIN" function
+               (:arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4524 4539]))                  
+                :type "int")
+                nil [4512 5409])
+            ("HaveType" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("MyMap" variable
+                       (:reference 1
+                        :type ("map" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5432 5459])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5460 5476]))                  
+                :type "bool")
+                nil [5411 5604])
+            ("GetValue" function
+               (:arguments 
+                  ( ("MyMap" variable
+                       (:reference 1
+                        :type ("map" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5627 5654])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5655 5671]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [5609 5904])
+            ("GetStrValue" function
+               (:arguments 
+                  ( ("MyMap" variable
+                       (:reference 1
+                        :type ("map" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5923 5950])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5951 5967])
+                    ("pDst" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5968 5979])
+                    ("dwDstLen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5980 5998]))                  
+                :type "bool")
+                nil [5906 6295])
+            ("SendBandCard2DB" function
+               (:arguments 
+                  ( ("MyMap" variable
+                       (:reference 1
+                        :type ("map" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6317 6344]))                  
+                :type "int")
+                nil [6297 6884])
+            ("KickUINInfo2DB" function
+               (:arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6955 6970])
+                    ("dwIP" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6971 6985])
+                    ("dwFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6986 7002]))                  
+                :type "int")
+                nil [6936 7279])
+            ("FwdRedPkgAction2PCQQ" function
+               (:arguments 
+                  ( ("pkt" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("stSendAndRecvRedPkt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7347 7378])
+                    ("dwCmd" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7379 7394]))                  
+                :type "int")
+                nil [7322 8325])
+            ("FwdRedPkgAction2MblQQ" function
+               (:arguments 
+                  ( ("pkt" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("stSendAndRecvRedPkt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8394 8425]))                  
+                :type "int")
+                nil [8368 9146])
+            ("SendRedPkt2DB" function
+               (:arguments 
+                  ( ("MyMap" variable
+                       (:reference 1
+                        :type ("map" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9169 9196]))                  
+                :type "int")
+                nil [9151 10599])
+            ("PrcsCS0x34" function
+               (:arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10616 10630])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10631 10642])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [10643 10655]))                  
+                :type "int")
+                nil [10601 11870])
+            ("PrcsCS0x35C" function
+               (:arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11889 11903])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11904 11915])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [11916 11928]))                  
+                :type "int")
+                nil [11873 12780])
+            ("PrcsCftForwardPkt" function
+               (:arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13062 13076])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13077 13088])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [13089 13101]))                  
+                :type "int")
+                nil [13040 14090])
+            ("Byte2Str" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("sStr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14113 14124])
+                    ("sByte" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14125 14143])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [14144 14153]))                  
+                :type "void")
+                nil [14092 14278])
+            ("AddUINEvilUse" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14306 14321]))                  
+                :type "void")
+                nil [14280 14622])
+            ("GetUINEvilUse" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14654 14669]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [14624 14794])
+            ("SetUINForbidden" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14824 14839]))                  
+                :type "void")
+                nil [14796 14981])
+            ("UINForbidden" function
+               (:arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15001 15016]))                  
+                :type "bool")
+                nil [14983 15201])
+            ("ForbidUINHB" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15228 15243]))                  
+                :type "void")
+                nil [15204 15538])
+            ("KickUinWithOption" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15592 15607]))                  
+                :type "int")
+                nil [15563 16710])
+            ("PrcsPluginReport2" function
+               (:arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16789 16803])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16804 16815])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [16816 16828]))                  
+                :type "int")
+                nil [16767 20902])
+            ("HandleUdpPkg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21296 21310])
+                    ("pCInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21311 21324])
+                    ("iUdpName" variable (:type "int") (reparse-symbol arg-sub-list) [21325 21338])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21339 21350])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [21351 21363]))                  
+                :type "int")
+                nil [21272 21916])
+            ("HandleLoop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [21971 21976]))                  
+                :type "int")
+                nil [21949 22173])
+            ("SetShutDownFlag" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [22203 22213]))                  
+                :type "void")
+                nil [22175 22323])
+            ("ReadConfig" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [22337 23673])
+            ("InitAllLogFile" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [23687 24304])
+            ("HandleAccept" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24331 24345])
+                    ("pCInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24346 24359])
+                    ("iListenAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [24360 24380]))                  
+                :type "int")
+                nil [24307 24395])
+            ("HandlePkgHead" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24422 24436])
+                    ("pCInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24437 24450])
+                    ("iAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [24451 24465])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24466 24477])
+                    ("iBytesRecved" variable (:type "int") (reparse-symbol arg-sub-list) [24478 24495])
+                    ("piPkgLen" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [24496 24510]))                  
+                :type "int")
+                nil [24397 24525])
+            ("HandlePkg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24547 24561])
+                    ("pCInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24562 24575])
+                    ("iAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [24576 24590])
+                    ("pPkg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24591 24602])
+                    ("iPkgLen" variable (:type "int") (reparse-symbol arg-sub-list) [24603 24615]))                  
+                :type "int")
+                nil [24526 24630])
+            ("HandleCloseConn" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstSctx" variable
+                       (:pointer 1
+                        :type ("SCTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24658 24672])
+                    ("pUserInfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24673 24689])
+                    ("iAddrName" variable (:type "int") (reparse-symbol arg-sub-list) [24690 24704])
+                    ("sErrInfo" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24705 24720]))                  
+                :type "int")
+                nil [24631 24738])
+            ("Init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [24779 24788])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24789 24802]))                  
+                :type "int")
+                nil [24763 26629])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [26641 26650])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26651 26664]))                  
+                :type "int")
+                nil [26632 27041]))          
+      :file "CftPktRecv.cpp"
+      :pointmax 27042
+      :fsize 27539
+      :lastmodtime '(23226 318 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FBDLog" (spp-arg-list ("_fmt_" "_args_...") 1936 . 1954) . 
+              ((DO "do" 1955 . 1957) (semantic-list "{ Log(&(pCfg->stFbnRedPktLog), 2, _fmt_, ## _args_); }" 1957 . 2011) (WHILE "while" 2012 . 2017) (semantic-list "(0)" 2018 . 2021)))
+          ("CUR_TIME" . ((semantic-list "(pCfg->dwCurTime)" 2142 . 2159)))
+          ("ARKickLog" (spp-arg-list ("_fmt_" "_args_...") 2039 . 2057) . 
+              ((DO "do" 2058 . 2060) (semantic-list "{ Log(&(pCfg->stARKickLog), 2, _fmt_, ## _args_); }" 2060 . 2111) (WHILE "while" 2112 . 2117) (semantic-list "(0)" 2118 . 2121)))
+          ("LOG_PATH" . ((string "\"home/oicq/CftPktRecv/log\"" 1447 . 1473)))
+          ("ErrorLog" (spp-arg-list ("_fmt_" "_args_...") 1742 . 1760) . 
+              ((DO "do" 1761 . 1763) (semantic-list "{ Log(&(pCfg->stErrorLog), 2, _fmt_, ## _args_); }" 1763 . 1813) (WHILE "while" 1814 . 1819) (semantic-list "(0)" 1820 . 1823)))
+          ("CONFIG_FILE" . ((string "\"/home/oicq/CftPktRecv/conf/CftPktRecv.conf\"" 1384 . 1428)))
+          ("EventLog" (spp-arg-list ("_fmt_" "_args_...") 1840 . 1858) . 
+              ((DO "do" 1859 . 1861) (semantic-list "{ Log(&(pCfg->stEventLog), 2, _fmt_, ## _args_); }" 1861 . 1911) (WHILE "while" 1912 . 1917) (semantic-list "(0)" 1918 . 1921)))
+          )
+)
+    (semanticdb-table "head.pb.h"
+      :file "head.pb.h"
+      :fsize 72223
+      :lastmodtime '(23117 38909 0 0))
+    (semanticdb-table "CftPktRecv.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_CFT_PKT_RECV_H_" variable (:constant-flag t) nil [34 50])
+            ("arpa/inet.h" include (:system-flag t) nil [53 75])
+            ("lib_utils.h" include nil nil [117 139])
+            ("common.h" include nil nil [140 159])
+            ("struct.h" include nil nil [160 179])
+            ("oi_shm.h" include nil nil [180 199])
+            ("oi_log.h" include nil nil [200 219])
+            ("oi_cfg.h" include nil nil [220 239])
+            ("oi_misc.h" include nil nil [240 260])
+            ("oi_pkg.h" include nil nil [261 280])
+            ("Attr_API.h" include nil nil [281 302])
+            ("MAX_PATH_LEN" variable (:constant-flag t) nil [340 352])
+            ("MAX_IP_STRING_LEN" variable (:constant-flag t) nil [372 389])
+            ("USER_INFO_LEN" variable (:constant-flag t) nil [401 414])
+            ("MAX_MAC_NUM" variable (:constant-flag t) nil [442 453])
+            ("MD5_DIGEST_LEN" variable (:constant-flag t) nil [491 505])
+            ("stCftPktRecvCfg" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("szLocalIP" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [553 573])
+                          ("iListenPort" variable (:type "int") (reparse-symbol classsubparts) [575 593])
+                          ("iFbtHBCondition" variable (:type "int") (reparse-symbol classsubparts) [595 617])
+                          ("szLogFilePath" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [636 671])
+                          ("iMaxLogSize" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [673 694])
+                          ("iMaxLogNum" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [696 716])
+                          ("iLogLevel" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [718 737])
+                          ("stErrorLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [743 763])
+                          ("stEventLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [765 785])
+                          ("stFbnRedPktLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [787 811])
+                          ("stARKickLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [813 834])
+                          ("stDBAddr" variable (:type ("sockaddr_in" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [838 866])
+                          ("stDBAddr2" variable (:type ("sockaddr_in" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [868 897])
+                          ("stClDwnUINAddr" variable (:type ("sockaddr_in" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [899 933])
+                          ("stKickDBAddr" variable (:type ("sockaddr_in" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [949 981])
+                          ("dwCurTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1002 1021])
+                          ("iAllLog" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1023 1040])
+                          ("iClDwnSimuUIN" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1042 1065])
+                          ("iKickPInUIN" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1091 1112])
+                          ("iNewPluginKick" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1138 1162]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [517 1197])
+            ("SVRFRAME_LISTEN_PORT_NAME" type
+               (:members 
+                  ( ("PORT_NAME1" variable
+                       (:constant-flag t
+                        :default-value (1247 1250)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1234 1250])
+                    ("PC_HONGBAO_CHECK" variable
+                       (:constant-flag t
+                        :default-value (1356 1359)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1337 1359])
+                    ("MBL_HONGBAO_CHECK" variable
+                       (:constant-flag t
+                        :default-value (1463 1466)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1443 1466])
+                    ("PC_HONGBAO_CHECK_RESULT2" variable
+                       (:constant-flag t
+                        :default-value (1496 1499)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1469 1499])
+                    ("KICK_PORT" variable
+                       (:constant-flag t
+                        :default-value (1514 1517)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1502 1517]))                  
+                :type "enum")
+                nil [1200 1521])
+            ("NTOHL" variable (:constant-flag t) nil [1533 1538])
+            ("NTOHS" variable (:constant-flag t) nil [1580 1585])
+            ("ERRSTR" variable (:constant-flag t) nil [1629 1635])
+            ("MAX_PROCESS_PORT_NUM" variable (:constant-flag t) nil [1661 1681])
+            ("MAX" variable (:constant-flag t) nil [1709 1712])
+            ("MIN" variable (:constant-flag t) nil [1765 1768])
+            ("FLAG_ENUM" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("FROM_UIN_SIMPLE" variable
+                             (:constant-flag t
+                              :default-value (1834 1837)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1816 1837])
+                          ("TO_UIN_SIMPLE" variable
+                             (:constant-flag t
+                              :default-value (1869 1872)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1853 1872])
+                          ("SIMULATE_LG" variable
+                             (:constant-flag t
+                              :default-value (1903 1906)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1889 1906])
+                          ("PLUG_IN_LG" variable
+                             (:constant-flag t
+                              :default-value (1938 1941)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1925 1941])
+                          ("DINGXIANG_HB" variable
+                             (:constant-flag t
+                              :default-value (1971 1975)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1956 1975])
+                          ("PINGSHOUQI_HB" variable
+                             (:constant-flag t
+                              :default-value (2002 2006)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1986 2006])
+                          ("OTHER_HB" variable
+                             (:constant-flag t
+                              :default-value (2029 2033)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2018 2033])
+                          ("PC_HB" variable
+                             (:constant-flag t
+                              :default-value (2055 2059)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2047 2059]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1800 2089])
+            ("stSendAndRecvRedPkt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("cSTX" variable (:type "char") (reparse-symbol classsubparts) [2125 2137])
+                          ("wType" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2139 2155])
+                          ("dwFromUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2176 2196])
+                          ("dwToUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2198 2216])
+                          ("dwAmount" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2218 2237])
+                          ("dwGroup" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2239 2257])
+                          ("wRedPktType" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2327 2349])
+                          ("wLgDays" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2353 2371])
+                          ("dwRecvTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2382 2403])
+                          ("dwSendTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2415 2435])
+                          ("sReserved" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2446 2465])
+                          ("cETX" variable (:type "char") (reparse-symbol classsubparts) [2467 2477])
+                          ("HTON" function (:type "void") (reparse-symbol classsubparts) [2487 2780]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2107 2802])
+            ("stRedPktPCCheck" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("cSTX" variable (:type "char") (reparse-symbol classsubparts) [2835 2847])
+                          ("dwHeadLen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2849 2868])
+                          ("dwBodyLen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2870 2889])
+                          ("spbHead" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2891 2908])
+                          ("spbBody" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2910 2927])
+                          ("HTON" function (:type "void") (reparse-symbol classsubparts) [2951 3032])
+                          ("NTOH" function (:type "void") (reparse-symbol classsubparts) [3037 3119]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2817 3138])
+            ("stRedPktPluginCheck" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("cSTX" variable (:type "char") (reparse-symbol classsubparts) [3199 3211])
+                          ("dwReqLen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3213 3231])
+                          ("sPbRedPacketReq" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3233 3258])
+                          ("HTON" function (:type "void") (reparse-symbol classsubparts) [3282 3330])
+                          ("NTOH" function (:type "void") (reparse-symbol classsubparts) [3335 3383]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [3181 3406])
+            ("stBandCard2DB" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("cSTX" variable (:type "char") (reparse-symbol classsubparts) [3479 3491])
+                          ("dwFromUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3493 3513])
+                          ("dwBankType" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3515 3535])
+                          ("dwTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3537 3553])
+                          ("sMobile" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3555 3574])
+                          ("sPersonID" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3576 3597])
+                          ("sCardMD5" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3599 3619])
+                          ("cETX" variable (:type "char") (reparse-symbol classsubparts) [3621 3633])
+                          ("HTON" function (:type "void") (reparse-symbol classsubparts) [3637 3746]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [3461 3762])
+            ("stClsDwnUINReq" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("cSTX" variable (:type "char") (reparse-symbol classsubparts) [3806 3818])
+                          ("cVersion" variable (:type "char") (reparse-symbol classsubparts) [3831 3847])
+                          ("dwBodyLen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3857 3876])
+                          ("sBody" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3916 3931])
+                          ("HTON" function (:type "void") (reparse-symbol classsubparts) [3958 4007]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [3788 4028])
+            ("stKickUIN2DB" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4048 4066])
+                          ("dwCltIP" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4071 4091])
+                          ("dwTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4096 4115])
+                          ("dwFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4117 4136])
+                          ("HTON" function (:type "void") (reparse-symbol classsubparts) [4138 4259]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [4030 4275])
+            ("stQQCSPkg" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("cSTX" variable (:type "char") (reparse-symbol classsubparts) [4296 4306])
+                          ("dwHeadLen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4308 4327])
+                          ("dwBodyLen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4329 4348])
+                          ("sPBHeader" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [4350 4369])
+                          ("NTOH" function (:type "void") (reparse-symbol classsubparts) [4407 4488]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [4278 4500])
+            ("stCS0x34" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("g1" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [5003 5027])
+                          ("g2" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [5029 5053])
+                          ("g3" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [5055 5079])
+                          ("dwCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5081 5096])
+                          ("name1_len" variable (:type "char") (reparse-symbol classsubparts) [5098 5113])
+                          ("name1" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [5115 5129])
+                          ("NTOH" function (:type "void") (reparse-symbol classsubparts) [5172 5213]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [4985 5228])
+            ("stQQCSBinReport" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("cSTX" variable (:type "char") (reparse-symbol classsubparts) [5248 5258])
+                          ("PkgHead" variable (:type ("DBPkgHead" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5260 5278])
+                          ("cldHead" variable (:type ("cld_pkg_head" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5280 5301])
+                          ("cSubCmd" variable (:type "char") (reparse-symbol classsubparts) [5303 5316])
+                          ("cType" variable (:type "char") (reparse-symbol classsubparts) [5318 5329])
+                          ("cs34" variable (:type ("stCS0x34" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5331 5345])
+                          ("NTOH" function (:type "void") (reparse-symbol classsubparts) [5380 5412]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [5230 5432]))          
+      :file "CftPktRecv.h"
+      :pointmax 5463
+      :fsize 6190
+      :lastmodtime '(23117 38909 0 0)
+      :unmatched-syntax '((semantic-list 5447 . 5449) (symbol 5443 . 5447) (symbol 5436 . 5442) (punctuation 5435 . 5436) (semantic-list 2103 . 2106) (symbol 2099 . 2103) (number 2104 . 2105) (symbol 2092 . 2098) (number 2104 . 2105) (punctuation 2091 . 2092))
+      :lexical-table 
+        '(("MAX_IP_STRING_LEN" . ((number "64" 390 . 392)))
+          ("MD5_DIGEST_LEN" . ((number "16" 506 . 508)))
+          ("MAX_PROCESS_PORT_NUM" . ((semantic-list "(5)" 1682 . 1685)))
+          ("MAX" (spp-arg-list ("a" "b") 1712 . 1717) . ((semantic-list "((a)>=(b)?(a):(b))" 1718 . 1736)))
+          ("NTOHS" (spp-arg-list ("x") 1585 . 1588) . ((symbol "ntohs" 1589 . 1594) (semantic-list "(*((unsigned short*)(x)))" 1594 . 1619)))
+          ("ERRSTR" . ((symbol "strerror" 1636 . 1644) (semantic-list "(errno)" 1644 . 1651)))
+          ("MIN" (spp-arg-list ("a" "b") 1768 . 1773) . ((semantic-list "((a)<(b)?(a):(b))" 1774 . 1791)))
+          ("MAX_PATH_LEN" . ((number "256" 360 . 363)))
+          ("MAX_MAC_NUM" . ((semantic-list "(20)" 454 . 458)))
+          ("NTOHL" (spp-arg-list ("x") 1538 . 1541) . ((symbol "ntohl" 1542 . 1547) (semantic-list "(*((unsigned long*)(x)))" 1547 . 1571)))
+          ("_CFT_PKT_RECV_H_")
+          ("USER_INFO_LEN" . ((semantic-list "(10)" 415 . 419)))
+          )
+)
+    (semanticdb-table "hash_define.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__HASH_DEFINE_H__" variable (:constant-flag t) nil [35 52])
+            ("hash_template.h" include nil nil [54 80])
+            ("KEY_LG_HASH_SHMKEY" variable (:constant-flag t) nil [90 108])
+            ("KEY_LG_HASH_TIME" variable (:constant-flag t) nil [131 147])
+            ("KEY_LG_HASH_LEN" variable (:constant-flag t) nil [166 181])
+            ("KEY_LG_HASH_CLEAR_TIME" variable (:constant-flag t) nil [206 228])
+            ("SIMU_LG_HASH_SHMKEY" variable (:constant-flag t) nil [246 265])
+            ("SIMU_LG_HASH_TIME" variable (:constant-flag t) nil [291 308])
+            ("SIMU_LG_HASH_LEN" variable (:constant-flag t) nil [330 346])
+            ("SIMU_LG_HASH_CLEAR_TIME" variable (:constant-flag t) nil [374 397])
+            ("UIN_HASH_SHMKEY" variable (:constant-flag t) nil [420 435])
+            ("UIN_HASH_TIME" variable (:constant-flag t) nil [463 476])
+            ("UIN_HASH_LEN" variable (:constant-flag t) nil [498 510])
+            ("UIN_HASH_CLEAR_TIME" variable (:constant-flag t) nil [537 556])
+            ("IP_HASH_SHMKEY" variable (:constant-flag t) nil [579 593])
+            ("IP_HASH_TIME" variable (:constant-flag t) nil [620 632])
+            ("IP_HASH_LEN" variable (:constant-flag t) nil [655 666])
+            ("IP_HASH_CLEAR_TIME" variable (:constant-flag t) nil [695 713])
+            ("IPUIN_HASH_SHMKEY" variable (:constant-flag t) nil [736 753])
+            ("IPUIN_HASH_TIME" variable (:constant-flag t) nil [781 796])
+            ("IPUIN_HASH_LEN" variable (:constant-flag t) nil [820 834])
+            ("IPUIN_HASH_CLEAR_TIME" variable (:constant-flag t) nil [864 885])
+            ("AR_DIVISOR" variable (:constant-flag t) nil [909 919])
+            ("MAX_ADCODE_LEN" variable (:constant-flag t) nil [1011 1025])
+            ("stKeyLgElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("ddwIPUIN" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1074 1095])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1100 1124])
+                          ("aAdcode" variable
+                             (:dereference 1
+                              :type ("uint32_t" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1139 1172])
+                          ("len" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1174 1187])
+                          ("last_adcode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1215 1237])
+                          ("adcode_change" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1253 1277]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1053 1312])
+            ("stSimuLgElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1352 1370])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1375 1399])
+                          ("dwCltIP" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1414 1434]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1331 1449])
+            ("stUINElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1490 1508])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1513 1537])
+                          ("dwCltIP" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1570 1590])
+                          ("dwFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1595 1614])
+                          ("dwReqCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1658 1679])
+                          ("wKeyLgReqCnt" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1698 1723])
+                          ("dwLat" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1791 1806])
+                          ("dwLng" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1808 1823])
+                          ("dwCurTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1825 1844])
+                          ("adCode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1846 1862])
+                          ("sReserved" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1867 1893]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1469 1905])
+            ("stSYSUINElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1946 1964])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1969 1993])
+                          ("dwCltIP" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2008 2028])
+                          ("dwFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2033 2052])
+                          ("dwReqCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2091 2112])
+                          ("sReserved" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2131 2157]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1925 2172])
+            ("stIPElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwIP" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2213 2230])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2235 2259])
+                          ("dwCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2278 2296])
+                          ("dwUINCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2328 2349])
+                          ("dwKeyLgUINCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2381 2407])
+                          ("dwSimuLgUINCnt" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2430 2457])
+                          ("wEvilFlag" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2480 2502])
+                          ("sReserved" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2538 2563]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2192 2574])
+            ("stIPUINElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("ddwIPUIN" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2612 2633])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2638 2662])
+                          ("wFlag" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2681 2699]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2591 2713])
+            ("PIN_UIN_HASH_SHMKEY" variable (:constant-flag t) nil [2756 2775])
+            ("PIN_UIN_HASH_TIME" variable (:constant-flag t) nil [2796 2813])
+            ("PIN_UIN_HASH_LEN" variable (:constant-flag t) nil [2829 2845])
+            ("PIN_UIN_HASH_CLEAR_TIME" variable (:constant-flag t) nil [2865 2888])
+            ("UIN_SET_FORBIDDEN_FLAG" variable (:constant-flag t) nil [2911 2933])
+            ("stPlugInUINElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2958 2974])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2980 3002])
+                          ("dwCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3012 3028])
+                          ("dwFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3054 3070])
+                          ("sReserved" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3072 3091]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2940 3109])
+            ("IMEI_HASH_SHMKEY" variable (:constant-flag t) nil [3120 3136])
+            ("IMEI_HASH_TIME" variable (:constant-flag t) nil [3162 3176])
+            ("IMEI_HASH_LEN" variable (:constant-flag t) nil [3197 3210])
+            ("IMEI_HASH_CLEAR_TIME" variable (:constant-flag t) nil [3236 3256])
+            ("stIMEIElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwIMEI" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3287 3304])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3306 3328])
+                          ("dwReqCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3338 3357])
+                          ("dwUINCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3367 3386])
+                          ("dwUINCnt_BigRedPkg" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3399 3430])
+                          ("dwUINCnt_CrossProv" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3435 3466])
+                          ("dwUINCnt_BigUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3468 3493])
+                          ("sReserved" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3498 3524]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [3269 3537])
+            ("IMEI_UIN_HASH_SHMKEY" variable (:constant-flag t) nil [3547 3567])
+            ("IMEI_UIN_HASH_TIME" variable (:constant-flag t) nil [3593 3611])
+            ("IMEI_UIN_HASH_LEN" variable (:constant-flag t) nil [3632 3649])
+            ("IMEI_UIN_HASH_CLEAR_TIME" variable (:constant-flag t) nil [3675 3699])
+            ("stIMEIUINElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("qwIMEIUIN" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3730 3750])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3752 3774])
+                          ("dwFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3784 3800])
+                          ("sReserved" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3805 3830]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [3712 3846])
+            ("UIN_2ND_HASH_SHMKEY" variable (:constant-flag t) nil [3856 3875])
+            ("UIN_2ND_HASH_TIME" variable (:constant-flag t) nil [3901 3918])
+            ("UIN_2ND_HASH_LEN" variable (:constant-flag t) nil [3939 3955])
+            ("UIN_2ND_HASH_CLEAR_TIME" variable (:constant-flag t) nil [3981 4004])
+            ("stUIN2ndElmt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4035 4051])
+                          ("dwStartTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4053 4075])
+                          ("dwReqCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4085 4103])
+                          ("dwBigRedPkgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4105 4129])
+                          ("sReserved" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [4134 4159]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [4017 4174])
+            ("KeyLgHashTable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stKeyLgElmt" type nil nil nil)
+                          ("uint64_t" type nil nil nil)
+                          ("1000000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4192 4286])
+            ("SimuLgHashTable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stSimuLgElmt" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("2000000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4287 4385])
+            ("UINHashTable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stUINElmt" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("500000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4386 4470])
+            ("IPHashTable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stIPElmt" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("2000000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4471 4551])
+            ("IPUINHashTable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stIPUINElmt" type nil nil nil)
+                          ("uint64_t" type nil nil nil)
+                          ("4000000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4552 4644])
+            ("PIN_UINHashTable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stPlugInUINElmt" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("200000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4645 4747])
+            ("IMEITable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stIMEIElmt" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("500000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4748 4832])
+            ("IMEIUINTable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stIMEIUINElmt" type nil nil nil)
+                          ("uint64_t" type nil nil nil)
+                          ("500000")
+                          ("30"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4833 4931])
+            ("UIN2NDTable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stUIN2ndElmt" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("500000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4932 5026])
+            ("SYSUIN_HASH_SHMKEY" variable (:constant-flag t) nil [5037 5055])
+            ("SYSUIN_HASH_TIME" variable (:constant-flag t) nil [5081 5097])
+            ("SYSUIN_HASH_LEN" variable (:constant-flag t) nil [5120 5135])
+            ("SYSUIN_HASH_CLEAR_TIME" variable (:constant-flag t) nil [5164 5186])
+            ("SYSUINHashTable_T" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("stSYSUINElmt" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("1000000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [5202 5298]))          
+      :file "hash_define.h"
+      :pointmax 5308
+      :fsize 5580
+      :lastmodtime '(23117 38909 0 0)
+      :unmatched-syntax '((semantic-list 4188 . 4190) (symbol 4184 . 4188) (symbol 4177 . 4183) (punctuation 4176 . 4177))
+      :lexical-table 
+        '(("MAX_ADCODE_LEN" . ((number "10" 1026 . 1028)))
+          ("IMEI_HASH_SHMKEY" . ((number "0x74abadc" 3144 . 3153)))
+          ("SYSUIN_HASH_LEN" . ((number "1000000" 5148 . 5155)))
+          ("SIMU_LG_HASH_TIME" . ((number "20" 319 . 321)))
+          ("IMEI_UIN_HASH_CLEAR_TIME" . ((semantic-list "(3600*2)" 3703 . 3711)))
+          ("__HASH_DEFINE_H__")
+          ("KEY_LG_HASH_LEN" . ((number "1000000" 190 . 197)))
+          ("SIMU_LG_HASH_SHMKEY" . ((number "0x100012" 274 . 282)))
+          ("SIMU_LG_HASH_CLEAR_TIME" . ((semantic-list "(86400)" 402 . 409)))
+          ("UIN_HASH_SHMKEY" . ((number "0x7ab90327" 444 . 454)))
+          ("IPUIN_HASH_SHMKEY" . ((number "0x100015" 764 . 772)))
+          ("PIN_UIN_HASH_TIME" . ((number "20" 2818 . 2820)))
+          ("KEY_LG_HASH_CLEAR_TIME" . ((semantic-list "(3600)" 230 . 236)))
+          ("IP_HASH_TIME" . ((number "20" 644 . 646)))
+          ("IMEI_HASH_CLEAR_TIME" . ((semantic-list "(3600*2)" 3260 . 3268)))
+          ("SYSUIN_HASH_SHMKEY" . ((number "0x7ab90bca" 5062 . 5072)))
+          ("KEY_LG_HASH_TIME" . ((number "20" 155 . 157)))
+          ("IP_HASH_LEN" . ((number "2000000" 679 . 686)))
+          ("IMEI_HASH_TIME" . ((number "20" 3186 . 3188)))
+          ("UIN_2ND_HASH_LEN" . ((number "500000" 3966 . 3972)))
+          ("UIN_2ND_HASH_CLEAR_TIME" . ((semantic-list "(3600*2)" 4008 . 4016)))
+          ("KEY_LG_HASH_SHMKEY" . ((number "0x0b7a98" 114 . 122)))
+          ("UIN_HASH_TIME" . ((number "20" 487 . 489)))
+          ("UIN_HASH_LEN" . ((number "500000" 522 . 528)))
+          ("UIN_HASH_CLEAR_TIME" . ((semantic-list "(3600*2)" 561 . 569)))
+          ("IPUIN_HASH_TIME" . ((number "20" 809 . 811)))
+          ("IPUIN_HASH_LEN" . ((number "4000000" 848 . 855)))
+          ("IPUIN_HASH_CLEAR_TIME" . ((semantic-list "(3600)" 892 . 898)))
+          ("IMEI_UIN_HASH_TIME" . ((number "30" 3621 . 3623)))
+          ("IMEI_UIN_HASH_LEN" . ((number "500000" 3660 . 3666)))
+          ("UIN_2ND_HASH_SHMKEY" . ((number "0x74abade" 3883 . 3892)))
+          ("PIN_UIN_HASH_SHMKEY" . ((number "0x100016" 2779 . 2787)))
+          ("UIN_SET_FORBIDDEN_FLAG" . ((semantic-list "(0x1)" 2934 . 2939)))
+          ("SIMU_LG_HASH_LEN" . ((number "2000000" 358 . 365)))
+          ("IP_HASH_SHMKEY" . ((number "0x100014" 603 . 611)))
+          ("IP_HASH_CLEAR_TIME" . ((semantic-list "(43200)" 719 . 726)))
+          ("AR_DIVISOR" . ((semantic-list "(1000*1000)" 920 . 931)))
+          ("PIN_UIN_HASH_LEN" . ((number "200000" 2850 . 2856)))
+          ("IMEI_HASH_LEN" . ((number "500000" 3221 . 3227)))
+          ("PIN_UIN_HASH_CLEAR_TIME" . ((semantic-list "(3600*12)" 2891 . 2900)))
+          ("IMEI_UIN_HASH_SHMKEY" . ((number "0x74abadd" 3575 . 3584)))
+          ("SYSUIN_HASH_TIME" . ((number "20" 5109 . 5111)))
+          ("SYSUIN_HASH_CLEAR_TIME" . ((semantic-list "(3600*2)" 5192 . 5200)))
+          ("UIN_2ND_HASH_TIME" . ((number "20" 3928 . 3930)))
+          )
+)
+    (semanticdb-table "MblCheckRslt.h"
+      :file "MblCheckRslt.h"
+      :fsize 723
+      :lastmodtime '(23117 38908 0 0))
+    (semanticdb-table "hash_template.h"
+      :file "hash_template.h"
+      :fsize 9205
+      :lastmodtime '(23117 38909 0 0))
+    (semanticdb-table "GenForbidStr.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 19])
+            ("stdio.h" include (:system-flag t) nil [20 37])
+            ("stdint.h" include (:system-flag t) nil [38 56])
+            ("common.h" include nil nil [97 120])
+            ("struct.h" include nil nil [121 141])
+            ("oi_cfg.h" include nil nil [142 165])
+            ("oi_log.h" include nil nil [166 189])
+            ("oi_str2.h" include nil nil [190 214])
+            ("oi_misc.h" include nil nil [215 239])
+            ("oi_str.h" include nil nil [240 263])
+            ("lib_utils.h" include nil nil [264 290])
+            ("lib_net.h" include nil nil [291 312])
+            ("Attr_API.h" include nil nil [313 338])
+            ("srv_framework.h" include nil nil [339 369])
+            ("tconv_g2u.h" include nil nil [370 396])
+            ("lib_md5.h" include nil nil [397 421])
+            ("ForbidUINHB" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("dwUIN" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [476 491]))                  
+                :type "void")
+                nil [452 788])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [798 807])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [807 819]))                  
+                :type "int")
+                nil [789 1062]))          
+      :file "GenForbidStr.cpp"
+      :pointmax 1063
+      :fsize 1135
+      :lastmodtime '(23226 1216 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_e!code_root!RedPacketFlt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

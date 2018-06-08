@@ -1,0 +1,517 @@
+;; Object XDByteStream/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "XDByteStream/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("/usr/local/commlib/Makefile.comm" include nil nil [1 42])
+            ("BINARY" variable (:default-value ("xdbyte_tool")) nil [43 64])
+            ("OUTLIB" variable (:default-value ("libXDByteStream_api.a")) nil [64 95])
+            ("CUR_USR" variable (:default-value ("`whoami`")) nil [96 113])
+            ("MY_INC" variable (:default-value ("$(INCCOMMNOMYSQL)" "-I/home/$(CUR_USR)/code_root/general_component_proj/trunk/XDByteStream")) nil [113 212])
+            ("MY_LIB" variable (:default-value ("$(LIBCOMMNOMYSQL)")) nil [212 240])
+            ("C_ARGS" variable (:default-value ("-g" "-Wall" "-DINMYSQL_STMT" "-DMFP_EPOLL" "-D_LARGEFILE_SOURCE" "-D_FILE_OFFSET_BITS=64" "-fPIC")) nil [240 334])
+            ("VPATH" variable nil nil [334 343])
+            (".SUFFIXES" function (:arguments (".o" ".cpp")) nil [344 363])
+            ("CXX" variable (:default-value ("g++")) nil [364 374])
+            ("CC" variable (:default-value ("gcc")) nil [374 383])
+            (".cpp.o" function nil nil [383 534])
+            (".c.o" function nil nil [535 681])
+            ("all" function (:arguments ("$(OUTLIB)" "$(BINARY)")) nil [682 707])
+            ("xdbyte_tool" function (:arguments ("xdbyte_tool.o" "XDByteStream_api.o")) nil [708 930])
+            ("libXDByteStream_api.a" function (:arguments ("XDByteStream_api.o")) nil [931 988])
+            ("clean" function nil nil [990 1028]))          
+      :file "Makefile"
+      :pointmax 1028
+      :fsize 1027
+      :lastmodtime '(23141 20229 0 0)
+      :unmatched-syntax '((shell-command 998 . 1027) (bol 997 . 997)))
+    (semanticdb-table "XDByteStream_api.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_XDBYTESTREAM_API_H_" variable (:constant-flag t) nil [38 58])
+            ("stdint.h" include (:system-flag t) nil [59 78])
+            ("stdlib.h" include (:system-flag t) nil [79 98])
+            ("xd_byte" type
+               (:members 
+                  ( ("XDBYTEATTR" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("XDATTR_NULL" variable
+                                     (:constant-flag t
+                                      :default-value (161 164)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [149 164])
+                                  ("XDATTR_WHITE" variable
+                                     (:constant-flag t
+                                      :default-value (201 205)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [186 205])
+                                  ("XDATTR_BLACK" variable
+                                     (:constant-flag t
+                                      :default-value (240 244)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [225 244]))                                
+                              :type "enum")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [122 273])
+                    ("MAX_XDBYTE_TXT_LEN" variable (:constant-flag t) (reparse-symbol namespacesubparts) [282 300])
+                    ("MAX_XDBYTE_DIMENSION_NUM" variable (:constant-flag t) (reparse-symbol namespacesubparts) [315 339])
+                    ("Func_XDByteCleanTxt_t" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("pInTxt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [385 405])
+                            ("pOutTxtBuf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [405 423])
+                            ("iOutBufLen" variable (:type "int") (reparse-symbol arg-sub-list) [423 438]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [355 439])
+                    ("stDimenMatchInfo_t" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("dOkProbability" variable (:type "double") (reparse-symbol classsubparts) [468 490])
+                                  ("dSusProbability" variable (:type "double") (reparse-symbol classsubparts) [499 522])
+                                  ("dBadProbability" variable (:type "double") (reparse-symbol classsubparts) [532 555]))                                
+                              :type "struct")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [444 637])
+                    ("stXDMatchInfo_t" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("szTxtBuf" variable
+                                     (:dereference 1
+                                      :type "char")
+                                      (reparse-symbol classsubparts) [666 703])
+                                  ("iMatchCnt" variable (:type "int") (reparse-symbol classsubparts) [712 726])
+                                  ("iSplitCnt" variable (:type "int") (reparse-symbol classsubparts) [735 749])
+                                  ("iCurDimensionNum" variable (:type "int") (reparse-symbol classsubparts) [758 779])
+                                  ("iMsgFreq" variable (:type "int") (reparse-symbol classsubparts) [788 801])
+                                  ("aDimenMatchInfo" variable
+                                     (:dereference 1
+                                      :type ("stDimenMatchInfo_t" type (:type "class") nil nil))
+                                      (reparse-symbol classsubparts) [810 871])
+                                  ("ddwMatchResult" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [880 904])
+                                  ("dwCurTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [913 932]))                                
+                              :type "struct")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [642 954])
+                    ("stXDByteConfig_t" type
+                       (:members 
+                          ( ("szConfigFile" variable
+                               (:dereference 1
+                                :type "char")
+                                (reparse-symbol classsubparts) [993 1016])
+                            ("iDimensionNum" variable (:type "int") (reparse-symbol classsubparts) [1025 1043])
+                            ("iXDByteHashLen" variable (:type "int") (reparse-symbol classsubparts) [1052 1071])
+                            ("iXDByteHashTime" variable (:type "int") (reparse-symbol classsubparts) [1080 1100])
+                            ("iXDByteHashKey" variable (:type "int") (reparse-symbol classsubparts) [1109 1128])
+                            ("iIfReturnExpired" variable (:type "int") (reparse-symbol classsubparts) [1137 1158])
+                            ("iIfLessCharsElement" variable (:type "int") (reparse-symbol classsubparts) [1167 1191])
+                            ("iNaturalCharsPerElement" variable (:type "int") (reparse-symbol classsubparts) [1200 1228])
+                            ("iXDByteClearSeconds" variable (:type "int") (reparse-symbol classsubparts) [1238 1262])
+                            ("iXDByteDeadSeconds" variable (:type "int") (reparse-symbol classsubparts) [1271 1294])
+                            ("iXDByteScanNodesOnce" variable (:type "int") (reparse-symbol classsubparts) [1303 1328])
+                            ("iMinMatchCnt" variable (:type "int") (reparse-symbol classsubparts) [1338 1355])
+                            ("iWordFreqValve" variable (:type "int") (reparse-symbol classsubparts) [1364 1383])
+                            ("dSuspectValve" variable (:type "double") (reparse-symbol classsubparts) [1392 1413])
+                            ("dBadProbValve" variable (:type "double") (reparse-symbol classsubparts) [1422 1443])
+                            ("pXDByteShm" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol classsubparts) [1598 1616])
+                            ("pXDByteTable" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol classsubparts) [1625 1645])
+                            ("pXDByteHashBase" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [1654 1676])
+                            ("XDbyteElementSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1685 1710])
+                            ("Func_XDByteCleanTxt" variable (:type ("Func_XDByteCleanTxt_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1720 1762])
+                            ("stXDByteConfig_t" function
+                               (:constructor-flag t
+                                :type ("stXDByteConfig_t" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1772 2456]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [960 2463])
+                    ("stXDByteShmHead_t" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("btSTX" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2513 2527])
+                                  ("wVersion" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2536 2554])
+                                  ("wDimensionNum" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2563 2586])
+                                  ("wNaturalCharsPerElement" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2595 2628])
+                                  ("btReserve" variable
+                                     (:dereference 1
+                                      :type ("uint8_t" type (:type "class") nil nil))
+                                      (reparse-symbol classsubparts) [2637 2660]))                                
+                              :type "struct")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [2484 2684])
+                    ("stXDDimension_t" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("dwSuspectCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2718 2740]))                                
+                              :type "struct")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [2689 2762])
+                    ("stXDByteElement_t" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2796 2812])
+                                  ("dwSetTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2821 2840])
+                                  ("dwAccessTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2849 2871])
+                                  ("wHasWriteFlag" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2880 2903])
+                                  ("btAttr" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2912 2927])
+                                  ("dwTotalCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2936 2956])
+                                  ("aDimensionList" variable
+                                     (:dereference 1
+                                      :type ("stXDDimension_t" type (:type "class") nil nil))
+                                      (reparse-symbol classsubparts) [2965 2999]))                                
+                              :type "struct")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [2767 3023])
+                    ("CXDByteStream_t" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3070 3077])
+                            ("Init4XDByteStream" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("szConfigFile" variable
+                                       (:pointer 1
+                                        :default-value "NULL"
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [3132 3155]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3110 3157])
+                            ("WriteMsg2XDShm" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pMsg" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [3432 3450])
+                                    ("ddwXDValue" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3450 3470])
+                                    ("wHasWriteFlag" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3470 3493])
+                                    ("btAttr" variable
+                                       (:default-value "XDATTR_NULL"
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3493 3519]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3413 3521])
+                            ("MoveMsgFromXDShm" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pMsg" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [3570 3588]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3549 3589])
+                            ("SetXDByteCleanTxtFunc" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Func_XDByteCleanTxt" variable (:type ("Func_XDByteCleanTxt_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3662 3704]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3636 3705])
+                            ("SetShmKey" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3728 3744]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3714 3745])
+                            ("private" label nil (reparse-symbol classsubparts) [3750 3758])
+                            ("XDByteGetElement" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3804 3820]))                                  
+                                :type ("stXDByteElement_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3767 3821])
+                            ("XDByteGetNewSpace" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3868 3884]))                                  
+                                :type ("stXDByteElement_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3830 3885])
+                            ("WriteOneXDByteKey" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3916 3932])
+                                    ("ddwXDValue" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3932 3952])
+                                    ("wHasWriteFlag" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3952 3975])
+                                    ("btAttr" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3975 3990]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3894 3991])
+                            ("ScanXDByteHash4Clean" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iCurHashTimePos" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4025 4046])
+                                    ("iCurHashLenPos" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4046 4066]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4000 4067])
+                            ("MoveOneXDByteKey" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4097 4113]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4076 4114])
+                            ("public" label nil (reparse-symbol classsubparts) [4119 4126])
+                            ("g_stXDMatchInfo" variable (:type ("stXDMatchInfo_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4135 4167])
+                            ("g_stXDByteConfig" variable (:type ("stXDByteConfig_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4176 4210])
+                            ("private" label nil (reparse-symbol classsubparts) [4215 4223]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3043 4230]))                  
+                :type "namespace")
+                nil [99 4232]))          
+      :file "XDByteStream_api.h"
+      :pointmax 4264
+      :fsize 4458
+      :lastmodtime '(23141 20228 0 0)
+      :unmatched-syntax '((punctuation 4232 . 4233) (semantic-list 3036 . 3038) (symbol 3032 . 3036) (symbol 3025 . 3031) (punctuation 3024 . 3025) (semantic-list 2476 . 2479) (symbol 2472 . 2476) (number 2477 . 2478) (symbol 2465 . 2471) (number 2477 . 2478) (punctuation 2464 . 2465) (TYPEDEF 347 . 354))
+      :lexical-table 
+        '(("MAX_XDBYTE_DIMENSION_NUM" . ((number "64" 340 . 342)))
+          ("_XDBYTESTREAM_API_H_")
+          ("MAX_XDBYTE_TXT_LEN" . ((number "2048" 302 . 306)))
+          )
+)
+    (semanticdb-table "xdbyte_tool.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("oi_log.h" include nil nil [91 114])
+            ("oi_misc.h" include nil nil [115 139])
+            ("lib_net.h" include nil nil [140 164])
+            ("__STDC_FORMAT_MACROS" variable (:constant-flag t) nil [231 251])
+            ("inttypes.h" include (:system-flag t) nil [259 280])
+            ("R_CONFIG" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("CXDByteStream" variable (:type ("xd_byte::CXDByteStream_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [302 341]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [281 352])
+            ("g_stConfig" variable (:type ("R_CONFIG" type (:type "class") nil nil)) nil [353 373])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [383 392])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [392 404]))                  
+                :type "int")
+                nil [374 5741]))          
+      :file "xdbyte_tool.cpp"
+      :pointmax 5743
+      :fsize 5742
+      :lastmodtime '(23141 20228 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__STDC_FORMAT_MACROS")
+          )
+)
+    (semanticdb-table "XDByteStream_api.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("sys/shm.h" include (:system-flag t) nil [20 40])
+            ("string.h" include (:system-flag t) nil [41 60])
+            ("math.h" include (:system-flag t) nil [61 78])
+            ("ctype.h" include (:system-flag t) nil [79 97])
+            ("time.h" include (:system-flag t) nil [98 115])
+            ("oi_cfg.h" include nil nil [156 179])
+            ("Attr_API.h" include nil nil [180 205])
+            ("XDByteStream_api.h" include nil nil [235 264])
+            ("xd_byte" using (:type ("xd_byte" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [266 290])
+            ("DEFAULT_XDBYTE_CONF" variable (:constant-flag t) nil [300 319])
+            ("DEFAULT_DIMENSION_NUM" variable (:constant-flag t) nil [378 399])
+            ("DEFAULT_NATURAL_CHARS_PER_ELEMENT" variable (:constant-flag t) nil [410 443])
+            ("DEFAULT_MIN_MATCH_CNT" variable (:constant-flag t) nil [455 476])
+            ("DEFAULT_WORDFREQ_VALVE" variable (:constant-flag t) nil [491 513])
+            ("DEFAULT_SUSPECT_VALVE" variable (:constant-flag t) nil [525 546])
+            ("DEFAULT_BADPROB_VALVE" variable (:constant-flag t) nil [563 584])
+            ("DEFAULT_XDBYTE_CLEAR_SECONDS" variable (:constant-flag t) nil [599 627])
+            ("DEFAULT_XDBYTE_DEAD_SECONDS" variable (:constant-flag t) nil [640 667])
+            ("DEFAULT_XDBYTE_SCAN_NODES_ONCE" variable (:constant-flag t) nil [685 715])
+            ("DEFAULT_XDBYTE_HASH_KEY" variable (:constant-flag t) nil [728 751])
+            ("DEFAULT_XDBYTE_HASH_LEN" variable (:constant-flag t) nil [770 793])
+            ("DEFAULT_XDBYTE_HASH_TIME" variable (:constant-flag t) nil [812 836])
+            ("XDByte_GetShm" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("iKey" variable (:type "int") (reparse-symbol arg-sub-list) [869 878])
+                    ("Size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [879 891])
+                    ("iFlag" variable (:type "int") (reparse-symbol arg-sub-list) [892 902]))                  
+                :type "char")
+                nil [842 1269])
+            ("XDByte_GetShm2" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pstShm" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1296 1310])
+                    ("iShmID" variable (:type "int") (reparse-symbol arg-sub-list) [1311 1322])
+                    ("Size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1323 1335])
+                    ("iFlag" variable (:type "int") (reparse-symbol arg-sub-list) [1336 1346]))                  
+                :type "int")
+                nil [1270 1624])
+            ("XDByte_IsPrimeNum" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("n" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1654 1665]))                  
+                :type "int")
+                nil [1625 1826])
+            ("DefaultXDByteCleanMsg" function
+               (:arguments 
+                  ( ("pInTxt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1853 1873])
+                    ("pOutTxtBuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1873 1891])
+                    ("iOutBufLen" variable (:type "int") (reparse-symbol arg-sub-list) [1891 1906]))                  
+                :type "int")
+                nil [1827 4332])
+            ("XDByteGetElement" function
+               (:pointer 1
+                :parent "CXDByteStream_t"
+                :arguments 
+                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4386 4402]))                  
+                :type ("stXDByteElement_t" type (:type "class") nil nil))
+                nil [4333 5355])
+            ("XDByteGetNewSpace" function
+               (:pointer 1
+                :parent "CXDByteStream_t"
+                :arguments 
+                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5412 5428]))                  
+                :type ("stXDByteElement_t" type (:type "class") nil nil))
+                nil [5357 6298])
+            ("WriteOneXDByteKey" function
+               (:parent "CXDByteStream_t"
+                :arguments 
+                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6340 6356])
+                    ("ddwXDValue" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6356 6376])
+                    ("wHasWriteFlag" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6376 6399])
+                    ("btAttr" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6399 6414]))                  
+                :type "int")
+                nil [6301 8183])
+            ("ScanXDByteHash4Clean" function
+               (:parent "CXDByteStream_t"
+                :arguments 
+                  ( ("iCurHashTimePos" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8227 8248])
+                    ("iCurHashLenPos" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8248 8268]))                  
+                :type "int")
+                nil [8185 9659])
+            ("WriteMsg2XDShm" function
+               (:parent "CXDByteStream_t"
+                :arguments 
+                  ( ("pMsg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9697 9715])
+                    ("ddwXDValue" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9715 9735])
+                    ("wHasWriteFlag" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9735 9758])
+                    ("btAttr" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9758 9773]))                  
+                :type "int")
+                nil [9661 13449])
+            ("MoveOneXDByteKey" function
+               (:parent "CXDByteStream_t"
+                :arguments 
+                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13488 13504]))                  
+                :type "int")
+                nil [13450 13695])
+            ("MoveMsgFromXDShm" function
+               (:parent "CXDByteStream_t"
+                :arguments 
+                  ( ("pMsg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13734 13752]))                  
+                :type "int")
+                nil [13696 15821])
+            ("Init4XDByteStream" function
+               (:parent "CXDByteStream_t"
+                :arguments 
+                  ( ("szConfigFile" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15861 15880]))                  
+                :type "int")
+                nil [15822 20160])
+            ("SetXDByteCleanTxtFunc" function
+               (:parent "CXDByteStream_t"
+                :arguments 
+                  ( ("Func_XDByteCleanTxt" variable (:type ("Func_XDByteCleanTxt_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20204 20246]))                  
+                :type "int")
+                nil [20161 20326])
+            ("SetShmKey" function
+               (:parent "CXDByteStream_t"
+                :arguments 
+                  ( ("ddwKey" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20358 20374]))                  
+                :type "int")
+                nil [20327 20436]))          
+      :file "XDByteStream_api.cpp"
+      :pointmax 20437
+      :fsize 20504
+      :lastmodtime '(23142 64897 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DEFAULT_XDBYTE_HASH_LEN" . ((number "3000000" 796 . 803)))
+          ("DEFAULT_NATURAL_CHARS_PER_ELEMENT" . ((number "4" 444 . 445)))
+          ("DEFAULT_MIN_MATCH_CNT" . ((number "1" 481 . 482)))
+          ("DEFAULT_XDBYTE_HASH_KEY" . ((number "0x28758" 754 . 761)))
+          ("DEFAULT_WORDFREQ_VALVE" . ((number "10" 514 . 516)))
+          ("DEFAULT_BADPROB_VALVE" . ((number "0.95" 585 . 589)))
+          ("DEFAULT_XDBYTE_HASH_TIME" . ((number "10" 838 . 840)))
+          ("DEFAULT_DIMENSION_NUM" . ((number "8" 400 . 401)))
+          ("DEFAULT_SUSPECT_VALVE" . ((number "0.00001" 547 . 554)))
+          ("DEFAULT_XDBYTE_SCAN_NODES_ONCE" . ((number "10" 716 . 718)))
+          ("DEFAULT_XDBYTE_CONF" . ((string "\"/home/oicq/XDByteStream/conf/XDByteStream.conf\"" 321 . 369)))
+          ("DEFAULT_XDBYTE_CLEAR_SECONDS" . ((number "300" 628 . 631)))
+          ("DEFAULT_XDBYTE_DEAD_SECONDS" . ((semantic-list "(3600*4)" 668 . 676)))
+          )
+))
+  :file "!drive_e!code_root!general_component_proj!trunk!XDByteStream!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

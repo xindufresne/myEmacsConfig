@@ -1,0 +1,813 @@
+;; Object c2c_normal_msg_protect/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "c2c_normal_msg_protect/"
+  :tables
+  (list
+    (semanticdb-table "do_punish.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Msg.h" include nil nil [1 17])
+            ("do_punish.h" include nil nil [18 40])
+            ("limited_exe.h" include nil nil [41 65])
+            ("general_action.h" include nil nil [66 93])
+            ("./protocol/imsec_lock_uin.pb.h" include nil nil [94 135])
+            ("./protocol/uinbsplat.pb.h" include nil nil [136 172])
+            ("./protocol/urlquery_proto.pb.h" include nil nil [173 214])
+            ("NonStateActionInfo.h" include nil nil [215 246])
+            ("hit_report_api.h" include nil nil [247 274])
+            ("tc_api.h" include nil nil [275 294])
+            ("qos_client.h" include nil nil [295 318])
+            ("RedisApi.h" include nil nil [319 340])
+            ("stdint.h" include (:system-flag t) nil [341 359])
+            ("string" include (:system-flag t) nil [360 377])
+            ("uin_crypto.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [505 528])
+            ("tconv_g2u.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [482 504])
+            ("Attr_API.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [460 481])
+            ("oi_hash.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [439 459])
+            ("oi_str2.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [418 438])
+            ("g_stWorkerData" variable
+               (:typemodifiers ("extern")
+                :type ("WorkerData" type (:type "class") nil nil))
+                nil [581 614])
+            ("SaveData2Tdw" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMainMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [640 655]))                  
+                :type "int")
+                nil [616 2652])
+            ("RemoveAsiicFromGbkString" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("strOrig" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2693 2714])
+                    ("strRlt" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2717 2737]))                  
+                :type "int")
+                nil [2655 2929])
+            ("LogHit" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMainMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2950 2965]))                  
+                :type "int")
+                nil [2932 5290])
+            ("LockUinYean20" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMainMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5317 5332]))                  
+                :type "int")
+                nil [5292 7758])
+            ("BlockMsg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMainMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9900 9915]))                  
+                :type "int")
+                nil [9880 11305])
+            ("ByteStreamSend" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11334 11354])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11355 11365])
+                    ("len" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [11366 11375])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11376 11391]))                  
+                :type "int")
+                nil [11308 12275])
+            ("ByteStreamRecv" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12303 12323])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12324 12340])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [12341 12349])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12350 12365]))                  
+                :type "int")
+                nil [12277 12786])
+            ("UrlMirrorSend" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12812 12832])
+                    ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12833 12846])
+                    ("len" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [12847 12856])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12857 12872]))                  
+                :type "int")
+                nil [12787 14777])
+            ("UrlMirrorRecv" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14804 14824])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14825 14841])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [14842 14850])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14851 14866]))                  
+                :type "int")
+                nil [14779 15878])
+            ("QueryUrlMirror" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15905 15928])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMainMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15929 15944])
+                    ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [15945 15953]))                  
+                :type "int")
+                nil [15879 16553])
+            ("GetRedisActionSend" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16586 16606])
+                    ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16607 16620])
+                    ("len" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [16621 16630])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16631 16646]))                  
+                :type "int")
+                nil [16556 17707])
+            ("GetRedisActionRecv" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17739 17759])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17760 17776])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [17777 17785])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17786 17801]))                  
+                :type "int")
+                nil [17709 19391])
+            ("GetRedisAction" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19418 19441])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMainMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19442 19457])
+                    ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [19458 19466]))                  
+                :type "int")
+                nil [19392 20107])
+            ("SetRedisActionSend" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20139 20159])
+                    ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20160 20173])
+                    ("len" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [20174 20183])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20184 20199]))                  
+                :type "int")
+                nil [20109 21636])
+            ("SetRedisActionRecv" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21667 21687])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21688 21704])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [21705 21713])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21714 21729]))                  
+                :type "int")
+                nil [21637 21870])
+            ("SetRedisAction" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21898 21921])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMainMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21922 21937])
+                    ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [21938 21946]))                  
+                :type "int")
+                nil [21872 22544])
+            ("QueryByteStream" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22694 22717])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMainMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22718 22733])
+                    ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [22734 22742]))                  
+                :type "int")
+                nil [22667 25965])
+            ("HandleEncode" function
+               (:parent "CDoPunishState"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26024 26044])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26045 26068])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26069 26084]))                  
+                :type "int")
+                nil [25991 26561])
+            ("HandleProcess" function
+               (:parent "CDoPunishState"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26596 26616])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26617 26640])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26641 26656]))                  
+                :type "int")
+                nil [26562 42301]))          
+      :file "do_punish.cpp"
+      :pointmax 42305
+      :fsize 42304
+      :lastmodtime '(23245 13123 981827 600000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Msg.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__MSG_H__" variable (:constant-flag t) nil [27 36])
+            ("__STDC_FORMAT_MACROS" variable (:constant-flag t) nil [45 65])
+            ("inttypes.h" include (:system-flag t) nil [66 87])
+            ("stdint.h" include (:system-flag t) nil [88 107])
+            ("string" include (:system-flag t) nil [108 125])
+            ("sppincl.h" include nil nil [126 146])
+            ("MsgBase.h" include nil nil [147 167])
+            ("hash_template.h" include nil nil [168 194])
+            ("StoreFile.h" include nil nil [195 217])
+            ("./protocol/scintf.pb.h" include nil nil [218 251])
+            ("./protocol/scdata.pb.h" include nil nil [252 285])
+            ("./protocol/sc_portrait.pb.h" include nil nil [286 324])
+            ("c2c_byte_stream_msg.pb.h" include nil nil [325 360])
+            ("udp_log.h" include nil nil [361 381])
+            ("oi_log.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [443 462])
+            ("oi_hash.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [422 442])
+            ("" type
+               (:members 
+                  ( ("STATE_ID_ERROR" variable
+                       (:constant-flag t
+                        :default-value (520 522)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [505 522])
+                    ("STATE_ID_FINISHED" variable
+                       (:constant-flag t
+                        :default-value (546 547)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [528 547])
+                    ("STATE_ID_QUERY_DATA" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [553 573])
+                    ("STATE_ID_DO_PUNISH" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [578 597]))                  
+                :type "enum")
+                nil [494 600])
+            ("CMainMsg" type
+               (:superclasses 
+                  ( ("CMsgBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [635 642])
+                    ("dwRemoteIp" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [647 667])
+                    ("wRemotePort" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [672 693])
+                    ("dwLocalIp" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [698 717])
+                    ("wLocalPort" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [722 742])
+                    ("stHead" variable (:type ("sc_bsplat::ScHeader" type (:type "class") nil nil)) (reparse-symbol classsubparts) [749 776])
+                    ("stSecData" variable (:type ("sc_bsplat::ScData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [783 811])
+                    ("stPubPart" variable (:type ("sc_bsplat::PubPart" type (:type "class") nil nil)) (reparse-symbol classsubparts) [818 847])
+                    ("stFrdPicBasic" variable (:type ("sc_portrait::FunctionPortrait_FriendMsgPortrait_BasicInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [854 926])
+                    ("stGrpPicBasic" variable (:type ("sc_portrait::FunctionPortrait_GroupMsgPortrait_BasicInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [933 1004])
+                    ("stLoginPic" variable (:type ("sc_portrait::LoginPortrait" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1011 1049])
+                    ("stLoginPicExp" variable (:type ("sc_portrait::LoginPortraitExp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1056 1100])
+                    ("dwHitFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1106 1125])
+                    ("strContentGbk" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1132 1158])
+                    ("strContentGbkClean" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1165 1196])
+                    ("strPicUrl" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1203 1225])
+                    ("iGuidDays" variable (:type "int") (reparse-symbol classsubparts) [1231 1245])
+                    ("sGuid" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1252 1270])
+                    ("iIpcDays" variable (:type "int") (reparse-symbol classsubparts) [1275 1288])
+                    ("iBeidouIpcDays" variable (:type "int") (reparse-symbol classsubparts) [1293 1312])
+                    ("dwFriendScore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1317 1340])
+                    ("bSingleFriend" variable (:type "bool") (reparse-symbol classsubparts) [1345 1364])
+                    ("bHasUrl" variable (:type "bool") (reparse-symbol classsubparts) [1376 1389])
+                    ("bNoProv" variable (:type "bool") (reparse-symbol classsubparts) [1394 1407])
+                    ("bNoIpc" variable (:type "bool") (reparse-symbol classsubparts) [1422 1434])
+                    ("bHasNum" variable (:type "bool") (reparse-symbol classsubparts) [1439 1452])
+                    ("bBUin" variable (:type "bool") (reparse-symbol classsubparts) [1458 1469])
+                    ("dwHistoryTouinCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1482 1509])
+                    ("dwHistoryMulTouinCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1531 1561])
+                    ("dwFriendCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1583 1604])
+                    ("dwGroupMsgCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1609 1632])
+                    ("bByteStreamD1" variable (:type "bool") (reparse-symbol classsubparts) [1638 1657])
+                    ("bByteStreamD2" variable (:type "bool") (reparse-symbol classsubparts) [1691 1710])
+                    ("bByteStreamD3" variable (:type "bool") (reparse-symbol classsubparts) [1724 1743])
+                    ("dwC2cMsgByteStreamFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1774 1806])
+                    ("bC2cMsgByteStreamResult" variable (:type "bool") (reparse-symbol classsubparts) [1811 1840])
+                    ("dwC2cMsgByteStreamEvilFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1845 1881])
+                    ("dwMsgUrlCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1887 1908])
+                    ("dwMsgUrlTouinCnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1913 1939])
+                    ("CMainMsg" function
+                       (:constructor-flag t
+                        :type ("CMainMsg" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1949 2564]))                  
+                :type "class")
+                nil [602 2567])
+            ("WorkerData" type
+               (:members 
+                  ( ("iTimerSid" variable (:type "int") (reparse-symbol classsubparts) [2594 2608])
+                    ("iSocket" variable (:type "int") (reparse-symbol classsubparts) [2613 2625])
+                    ("dwCurTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2630 2649])
+                    ("dwCurMin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2654 2672])
+                    ("dwByteStreamBadCnt_D1" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2695 2726])
+                    ("dwByteStreamGoodCnt_D1" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2731 2763])
+                    ("dwByteStreamBadCnt_D2" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2768 2799])
+                    ("dwByteStreamGoodCnt_D2" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2804 2836])
+                    ("dwByteStreamBadCnt_D3" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2841 2872])
+                    ("dwByteStreamGoodCnt_D3" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2877 2909])
+                    ("stDebugLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2915 2934])
+                    ("stErrorLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2939 2958])
+                    ("stEventLog" variable (:type ("LogFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2963 2982])
+                    ("pstUdpDebugLog" variable
+                       (:pointer 1
+                        :type ("CUdpLogSend" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2987 3015])
+                    ("pstUdpRemoteLog" variable
+                       (:pointer 1
+                        :type ("CUdpLogSend" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3020 3049])
+                    ("pstUdpHitLog" variable
+                       (:pointer 1
+                        :type ("CUdpLogSend" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3054 3080]))                  
+                :type "struct")
+                nil [2570 3106]))          
+      :file "Msg.h"
+      :pointmax 3115
+      :fsize 3252
+      :lastmodtime '(23235 30562 993635 0)
+      :unmatched-syntax '((punctuation 1251 . 1252) (punctuation 1250 . 1251) (punctuation 1202 . 1203) (punctuation 1201 . 1202) (punctuation 1164 . 1165) (punctuation 1163 . 1164) (punctuation 1131 . 1132) (punctuation 1130 . 1131) (punctuation 1055 . 1056) (punctuation 1054 . 1055) (punctuation 1010 . 1011) (punctuation 1009 . 1010) (punctuation 932 . 933) (punctuation 931 . 932) (punctuation 853 . 854) (punctuation 852 . 853) (punctuation 817 . 818) (punctuation 816 . 817) (punctuation 782 . 783) (punctuation 781 . 782) (punctuation 748 . 749) (punctuation 747 . 748))
+      :lexical-table 
+        '(("__STDC_FORMAT_MACROS")
+          ("__MSG_H__")
+          )
+)
+    (semanticdb-table "do_punish.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__DO_PUNISH_H__" variable (:constant-flag t) nil [33 48])
+            ("IState.h" include nil nil [49 68])
+            ("ActionInfo.h" include nil nil [69 92])
+            ("sppincl.h" include nil nil [93 113])
+            ("Msg.h" include nil nil [114 130])
+            ("USING_ASYNCFRAME_NS" variable (:type "int") nil [131 151])
+            ("CDoPunishState" type
+               (:superclasses 
+                  ( ("IState" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [191 198])
+                    ("HandleEncode" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pFrame" variable
+                               (:pointer 1
+                                :type ("CAsyncFrame" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [228 248])
+                            ("pActionSet" variable
+                               (:pointer 1
+                                :type ("CActionSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [249 272])
+                            ("pMsg" variable
+                               (:pointer 1
+                                :type ("CMsgBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [273 288]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [203 289])
+                    ("HandleProcess" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pFrame" variable
+                               (:pointer 1
+                                :type ("CAsyncFrame" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [320 340])
+                            ("pActionSet" variable
+                               (:pointer 1
+                                :type ("CActionSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [341 364])
+                            ("pMsg" variable
+                               (:pointer 1
+                                :type ("CMsgBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [365 380]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [294 381]))                  
+                :type "class")
+                nil [153 384]))          
+      :file "do_punish.h"
+      :pointmax 394
+      :fsize 393
+      :lastmodtime '(23125 34439 327754 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__DO_PUNISH_H__")
+          )
+)
+    (semanticdb-table "general_action.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__GENERAL_ACTION_H__" variable (:constant-flag t) nil [38 58])
+            ("IState.h" include nil nil [60 79])
+            ("ActionInfo.h" include nil nil [80 103])
+            ("sppincl.h" include nil nil [104 124])
+            ("Msg.h" include nil nil [125 141])
+            ("USING_ASYNCFRAME_NS" variable (:type "int") nil [142 162])
+            ("Func_GeneralEncode" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [198 218])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [219 229])
+                    ("len" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [230 239])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [240 255]))                  
+                :type "int")
+                nil [172 256])
+            ("Func_GeneralProcess" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [292 312])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [313 329])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [330 338])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [339 354]))                  
+                :type "int")
+                nil [265 355])
+            ("CGeneralAction" type
+               (:superclasses 
+                  ( ("IAction" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [396 403])
+                    ("HandleEncode" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pFrame" variable
+                               (:pointer 1
+                                :type ("CAsyncFrame" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [433 453])
+                            ("buf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [454 464])
+                            ("len" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [465 474])
+                            ("pMsg" variable
+                               (:pointer 1
+                                :type ("CMsgBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [475 490]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [408 491])
+                    ("HandleInput" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pFrame" variable
+                               (:pointer 1
+                                :type ("CAsyncFrame" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [520 540])
+                            ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [541 557])
+                            ("len" variable (:type "int") (reparse-symbol arg-sub-list) [558 566])
+                            ("pMsg" variable
+                               (:pointer 1
+                                :type ("CMsgBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [567 582]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [496 583])
+                    ("HandleProcess" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pFrame" variable
+                               (:pointer 1
+                                :type ("CAsyncFrame" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [614 634])
+                            ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [635 651])
+                            ("len" variable (:type "int") (reparse-symbol arg-sub-list) [652 660])
+                            ("pMsg" variable
+                               (:pointer 1
+                                :type ("CMsgBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [661 676]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [588 677])
+                    ("HandleError" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pFrame" variable
+                               (:pointer 1
+                                :type ("CAsyncFrame" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [706 726])
+                            ("err_no" variable (:type "int") (reparse-symbol arg-sub-list) [727 738])
+                            ("pMsg" variable
+                               (:pointer 1
+                                :type ("CMsgBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [739 754]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [682 755])
+                    ("public" label nil (reparse-symbol classsubparts) [756 763])
+                    ("CGeneralAction" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pFuncEncode" variable (:type ("Func_GeneralEncode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [783 814])
+                            ("pFuncProcess" variable (:type ("Func_GeneralProcess" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [815 848]))                          
+                        :type ("CGeneralAction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [768 936])
+                    ("private" label nil (reparse-symbol classsubparts) [937 945])
+                    ("m_pFuncEncode" variable (:type ("Func_GeneralEncode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [950 983])
+                    ("m_pFuncProcess" variable (:type ("Func_GeneralProcess" type (:type "class") nil nil)) (reparse-symbol classsubparts) [988 1023]))                  
+                :type "class")
+                nil [357 1026]))          
+      :file "general_action.h"
+      :pointmax 1035
+      :fsize 1034
+      :lastmodtime '(23125 34439 329754 0)
+      :unmatched-syntax '((TYPEDEF 257 . 264) (TYPEDEF 164 . 171))
+      :lexical-table 
+        '(("__GENERAL_ACTION_H__")
+          )
+)
+    (semanticdb-table "uin_crypto.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__UIN_CRYPTO_H__" variable (:constant-flag t) nil [34 50])
+            ("stdint.h" include (:system-flag t) nil [502 521])
+            ("inttypes.h" include (:system-flag t) nil [522 543])
+            ("UinCrypto_En1" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("qwRawUin" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1033 1051])
+                    ("sKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1052 1072])
+                    ("qwRltUinHi" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1073 1094])
+                    ("qwRltUinLow" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1095 1117]))                  
+                :type "int")
+                nil [1015 1118])
+            ("UinCrypto_De1" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("qwRltUinHi" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1137 1157])
+                    ("qwRltUinLow" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1158 1179])
+                    ("sKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1180 1200])
+                    ("qwRawUin" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1201 1220]))                  
+                :type "int")
+                nil [1119 1221])
+            ("UinCrypto_En2" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("qwRawUin" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1973 1991])
+                    ("dwEnTime" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1992 2010])
+                    ("dwMutatePeriod" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2011 2035])
+                    ("sKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2036 2056])
+                    ("qwRltUinHi" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2057 2078])
+                    ("qwRltUinLow" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2079 2101]))                  
+                :type "int")
+                nil [1955 2102])
+            ("UinCrypto_De2" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("qwRltUinHi" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2121 2141])
+                    ("qwRltUinLow" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2142 2163])
+                    ("sKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2164 2184])
+                    ("qwRawUin" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2185 2204])
+                    ("dwMutateTime" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2205 2228]))                  
+                :type "int")
+                nil [2103 2229])
+            ("UinCrypto_En3" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("qwRawUin" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2639 2657])
+                    ("sKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2658 2678])
+                    ("qwRltUin" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2679 2698]))                  
+                :type "int")
+                nil [2621 2699])
+            ("UinCrypto_De3" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("qwRltUin" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2718 2736])
+                    ("sKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2737 2757])
+                    ("qwRawUin" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2758 2777]))                  
+                :type "int")
+                nil [2700 2778]))          
+      :file "uin_crypto.h"
+      :pointmax 2807
+      :fsize 2806
+      :lastmodtime '(23125 34439 334754 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__UIN_CRYPTO_H__")
+          )
+))
+  :file "!home!tommydu!code_root!imsec_c2c_normal_msg_proj!trunk!c2c_normal_msg_protect!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

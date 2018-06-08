@@ -1,0 +1,138 @@
+;; Object umirror_api_pb_bk/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "umirror_api_pb_bk/"
+  :tables
+  (list
+    (semanticdb-table "urlquery_tool.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("strings.h" include (:system-flag t) nil [60 80])
+            ("iostream" include (:system-flag t) nil [81 100])
+            ("urlquery_api.h" include nil nil [102 127])
+            ("com_comm.h" include nil nil [128 149])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [151 171])
+            ("proto_urlquery" using (:type ("proto_urlquery" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [172 203])
+            ("PRINT" variable (:constant-flag t) nil [213 218])
+            ("DEFAULT_TIMEOUT_APPID" variable (:constant-flag t) nil [270 291])
+            ("DEFAULT_TIMEOUT_MSEC" variable (:constant-flag t) nil [304 324])
+            ("DEFAULT_TRY_TIMES" variable (:constant-flag t) nil [336 353])
+            ("QUERY_BY_URL" variable (:constant-flag t) nil [365 377])
+            ("QUERY_BY_FILE" variable (:constant-flag t) nil [388 401])
+            ("Config" type
+               (:members 
+                  ( ("szAppid" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [425 444])
+                    ("szUrl" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [449 466])
+                    ("szFile" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [471 489])
+                    ("szL5mid" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [494 513])
+                    ("szL5cid" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [518 537])
+                    ("szTimeout" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [542 563])
+                    ("szTrytimes" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [568 590])
+                    ("szUin" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [595 612])
+                    ("szClientIp" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [617 639])
+                    ("szAtNum" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [644 663])
+                    ("dwFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [669 685])
+                    ("dwL5mid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [690 707])
+                    ("dwL5cid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [712 729])
+                    ("dwTimeout" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [734 753])
+                    ("dwTrytimes" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [758 778])
+                    ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [783 798])
+                    ("dwClientIp" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [803 823])
+                    ("dwAtNum" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [828 845])
+                    ("dwAppid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [850 867]))                  
+                :type "struct")
+                nil [405 870])
+            ("g_stConfig" variable (:type ("Config" type (:type "class") nil nil)) nil [872 890])
+            ("Process" function
+               (:arguments 
+                  ( ("pUrl" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [904 915]))                  
+                :type "int")
+                nil [892 2474])
+            ("CheckInput" function
+               (:arguments 
+                  ( ("_pszParam" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2491 2514]))                  
+                :type "int")
+                nil [2476 2590])
+            ("Usage" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2603 2612])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2613 2626]))                  
+                :type "void")
+                nil [2592 3275])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3286 3295])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3296 3309]))                  
+                :type "int")
+                nil [3277 8211]))          
+      :file "urlquery_tool.cpp"
+      :pointmax 8212
+      :fsize 8250
+      :lastmodtime '(23063 39145 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("QUERY_BY_URL" . ((number "1" 378 . 379)))
+          ("DEFAULT_TIMEOUT_APPID" . ((number "100" 292 . 295)))
+          ("QUERY_BY_FILE" . ((number "2" 402 . 403)))
+          ("DEFAULT_TRY_TIMES" . ((number "1" 354 . 355)))
+          ("PRINT" (spp-arg-list ("v") 218 . 221) . 
+              ((symbol "cout" 222 . 226) (punctuation "<" 227 . 228) (punctuation "<" 228 . 229) (punctuation "#" 230 . 231) (symbol "v" 231 . 232) (punctuation "<" 233 . 234) (punctuation "<" 234 . 235) (string "\"[\"" 236 . 239) (punctuation "<" 240 . 241) (punctuation "<" 241 . 242) (symbol "v" 243 . 244) (punctuation "<" 245 . 246) (punctuation "<" 246 . 247) (string "\"]\"" 248 . 251) (punctuation "<" 252 . 253) (punctuation "<" 253 . 254) (symbol "endl" 255 . 259) (punctuation ";" 259 . 260)))
+          ("DEFAULT_TIMEOUT_MSEC" . ((number "50" 325 . 327)))
+          )
+))
+  :file "!drive_e!code_root!c2cmsg_receiver_2011_proj!trunk!buluo!sch_com_sec!umirror_api_pb_bk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

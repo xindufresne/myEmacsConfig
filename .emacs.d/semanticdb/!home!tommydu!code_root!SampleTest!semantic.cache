@@ -1,0 +1,48 @@
+;; Object SampleTest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "SampleTest/"
+  :tables
+  (list
+    (semanticdb-table "ReadTest.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 19])
+            ("string" include (:system-flag t) nil [20 36])
+            ("fstream" include (:system-flag t) nil [37 54])
+            ("cstdlib" include (:system-flag t) nil [55 72])
+            ("cstdio" include (:system-flag t) nil [73 89])
+            ("cstdint" include (:system-flag t) nil [90 107])
+            ("ctime" include (:system-flag t) nil [108 123])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [124 144])
+            ("maxvex" variable
+               (:constant-flag t
+                :default-value "5000000"
+                :type "int")
+                nil [145 172])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [182 191])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [191 204]))                  
+                :type "int")
+                nil [173 1575])
+            ("time" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("t2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1517 1520]))                  
+                :type "int")
+                nil [1511 1521])
+            ("endl" variable (:type "int") nil [1554 1559]))          
+      :file "ReadTest.cpp"
+      :pointmax 1576
+      :fsize 1575
+      :lastmodtime '(23257 7533 30598 74000)
+      :unmatched-syntax nil))
+  :file "!home!tommydu!code_root!SampleTest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
