@@ -1,2 +1,3 @@
 # myEmacsConfig
 我的emacs配置
+测试一下git push时候能成功推送到github服务器
