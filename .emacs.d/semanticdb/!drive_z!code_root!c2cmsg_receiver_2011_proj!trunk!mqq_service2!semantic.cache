@@ -1,0 +1,968 @@
+;; Object mqq_service2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mqq_service2/"
+  :tables
+  (list
+    (semanticdb-table "MobileMsg_UnifiedFilter.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("MobileMsg_UnifiedFilter.h" include nil nil [3 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("arpa/inet.h" include (:system-flag t) nil [60 82])
+            ("algorithm" include (:system-flag t) nil [83 103])
+            ("Attr_API.h" include nil nil [104 125])
+            ("NonStateActionInfo.h" include nil nil [126 157])
+            ("ModConfig.h" include nil nil [158 180])
+            ("InternalHelper.h" include nil nil [181 208])
+            ("CommonActions.h" include nil nil [209 235])
+            ("scintf.pb.h" include nil nil [236 258])
+            ("scdata.pb.h" include nil nil [259 281])
+            ("proto_head.h" include nil nil [282 305])
+            ("url_cloud.pb.h" include nil nil [306 331])
+            ("ActionReportUrl.h" include nil nil [332 360])
+            ("ProtoForwardSig.h" include nil nil [361 389])
+            ("ActionForwardSig.h" include nil nil [390 419])
+            ("ActionCheckVideoCover.h" include nil nil [420 454])
+            ("ActionMsgStat.h" include nil nil [455 481])
+            ("scbody_unitedfilter.pb.h" include nil nil [482 517])
+            ("check_videocover.pb.h" include nil nil [518 550])
+            ("c2c_count_recv.pb.h" include nil nil [551 581])
+            ("ParseMsgPack.h" include nil nil [582 607])
+            ("Helper.h" include nil nil [608 627])
+            ("EvilSeed.h" include nil nil [628 649])
+            ("proto0x211.h" include nil nil [650 673])
+            ("NetCheatSrc.pb.h" include nil nil [674 701])
+            ("ActionAccountCheat.h" include nil nil [702 733])
+            ("secure_info.pb.h" include nil nil [734 761])
+            ("subsec_body.pb.h" include nil nil [762 789])
+            ("url_extract.h" include nil nil [812 836])
+            ("ActionLog2DB_new.h" include nil nil [837 866])
+            ("DataQueryCenterProtocol.h" include nil nil [867 903])
+            ("ServerIpAllocator.h" include nil nil [904 934])
+            ("MyHashTabIpcdays.h" include nil nil [935 964])
+            ("tc_api.h" include nil nil [965 984])
+            ("uin_crypto.h" include nil nil [998 1021])
+            ("AccountIdentifierUtf8.h" include nil nil [1022 1056])
+            ("ActionC2cFilter.h" include nil nil [1057 1085])
+            ("ActionShareMsg.h" include nil nil [1086 1113])
+            ("logsys_client.h" include nil nil [1114 1140])
+            ("check_zhifubao_token.h" include nil nil [1141 1174])
+            ("general_action.h" include nil nil [1175 1202])
+            ("ActionArkMsg.h" include nil nil [1203 1228])
+            ("oi_str2.h" include nil nil [1270 1290])
+            ("ACTIVEINDEX" variable (:constant-flag t) nil [1330 1341])
+            ("STOLENINDEX" variable (:constant-flag t) nil [1394 1405])
+            ("EVILINDEX" variable (:constant-flag t) nil [1458 1467])
+            ("FEEDINDEX" variable (:constant-flag t) nil [1518 1527])
+            ("TEXT_HAS_URL" variable (:constant-flag t) nil [1590 1602])
+            ("TEXT_HAS_STRANGE_URL" variable (:constant-flag t) nil [1664 1684])
+            ("MSG_HAS_URL_RICH" variable (:constant-flag t) nil [1753 1769])
+            ("CURTIME" variable
+               (:typemodifiers ("extern")
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [1820 1844])
+            ("g_tEvilReg" variable
+               (:typemodifiers ("extern")
+                :type ("regex_t" type (:type "class") nil nil))
+                nil [1845 1871])
+            ("MsgSrc" type
+               (:members 
+                  ( ("MSGSRC_pc" variable
+                       (:constant-flag t
+                        :default-value (1904 1905)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1892 1905])
+                    ("MSGSRC_mqq" variable
+                       (:constant-flag t
+                        :default-value (1924 1928)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1911 1928])
+                    ("MSGSRC_webqq" variable
+                       (:constant-flag t
+                        :default-value (1949 1953)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1934 1953])
+                    ("MSGSRC_pubaccount" variable
+                       (:constant-flag t
+                        :default-value (2007 2011)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1987 2011])
+                    ("MSGSRC_redpack_private" variable
+                       (:constant-flag t
+                        :default-value (2060 2064)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2034 2064])
+                    ("MSGSRC_redpack_near" variable
+                       (:constant-flag t
+                        :default-value (2111 2115)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2085 2115])
+                    ("MSGSRC_redpack_groupt" variable
+                       (:constant-flag t
+                        :default-value (2166 2170)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2140 2170])
+                    ("MSGSRC_redpack_bar" variable
+                       (:constant-flag t
+                        :default-value (2221 2225)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2195 2225])
+                    ("MSGSRC_bless" variable
+                       (:constant-flag t
+                        :default-value (2269 2273)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2243 2273])
+                    ("MSGSRC_giftmsg" variable
+                       (:constant-flag t
+                        :default-value (2314 2318)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2288 2318])
+                    ("MSGSRC_share_msg" variable
+                       (:constant-flag t
+                        :default-value (2357 2361)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2337 2361]))                  
+                :type "enum")
+                nil [1873 2375])
+            ("MsgCtxFlagOther" type
+               (:members 
+                  ( ("MsgCtxFlagOther_qqwallet" variable
+                       (:constant-flag t
+                        :default-value (2429 2430)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2404 2430])
+                    ("MsgCtxFlagOther_strangeUrl" variable
+                       (:constant-flag t
+                        :default-value (2464 2465)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2437 2465])
+                    ("MsgCtxFlagOther_url" variable
+                       (:constant-flag t
+                        :default-value (2513 2514)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2493 2514])
+                    ("MsgCtxFlagOther_RTLOFileName" variable
+                       (:constant-flag t
+                        :default-value (2563 2564)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2534 2564])
+                    ("MsgCtxFlagOther_num" variable
+                       (:constant-flag t
+                        :default-value (2608 2610)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2588 2610])
+                    ("MsgCtxFlagOther_shakepoke" variable
+                       (:constant-flag t
+                        :default-value (2654 2656)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2628 2656]))                  
+                :type "enum")
+                nil [2377 2672])
+            ("UF_MsgType" type
+               (:members 
+                  ( ("UF_MsgType_SendCopy" variable
+                       (:constant-flag t
+                        :default-value (2762 2767)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2740 2767])
+                    ("UF_MsgType_0x211" variable
+                       (:constant-flag t
+                        :default-value (2813 2818)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2794 2818])
+                    ("UF_MsgType_Temp0x8c" variable
+                       (:constant-flag t
+                        :default-value (2846 2850)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2824 2850])
+                    ("UF_MsgType_Temp0x8d" variable
+                       (:constant-flag t
+                        :default-value (2878 2882)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2856 2882])
+                    ("UF_MsgType_Friend0xa6" variable
+                       (:constant-flag t
+                        :default-value (2912 2916)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2888 2916])
+                    ("UF_MsgType_Friend0xa7" variable
+                       (:constant-flag t
+                        :default-value (2946 2950)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2922 2950]))                  
+                :type "enum")
+                nil [2718 2958])
+            ("TSSubType" type
+               (:members 
+                  ( ("TSSubType_Neibor" variable
+                       (:constant-flag t
+                        :default-value (3007 3010)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2990 3010])
+                    ("TSSubType_Account" variable
+                       (:constant-flag t
+                        :default-value (3040 3043)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3022 3043])
+                    ("TSSubType_Wpa_ent" variable
+                       (:constant-flag t
+                        :default-value (3073 3075)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3055 3075])
+                    ("TSSubType_Wpa_per" variable
+                       (:constant-flag t
+                        :default-value (3107 3110)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3089 3110]))                  
+                :type "enum")
+                nil [2969 3123])
+            ("C2ctype2ServiceType" type
+               (:members 
+                  ( ("C2ctype2ServiceType_GroupTmp" variable
+                       (:constant-flag t
+                        :default-value (3198 3199)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3169 3199]))                  
+                :type "enum")
+                nil [3124 3211])
+            ("AbsMsgType" type
+               (:members 
+                  ( ("AbsMsgType_Unkown" variable
+                       (:constant-flag t
+                        :default-value (3267 3268)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3247 3268])
+                    ("AbsMsgType_friend" variable
+                       (:constant-flag t
+                        :default-value (3294 3303)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3274 3303])
+                    ("MSGTYPE_C2C" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3305 3317])
+                    ("AbsMsgType_AccountTemp" variable
+                       (:constant-flag t
+                        :default-value (3352 3361)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3327 3361])
+                    ("MSGTYPE_AccountTmp" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3363 3382])
+                    ("AbsMsgType_WpaEnt" variable
+                       (:constant-flag t
+                        :default-value (3413 3422)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3393 3422])
+                    ("MSGTYPE_BusiWPATmp" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3424 3443])
+                    ("AbsMsgType_WpaPer" variable
+                       (:constant-flag t
+                        :default-value (3476 3485)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3456 3485])
+                    ("MSGTYPE_WPATmp" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3487 3502])
+                    ("AbsMsgType_GroupTemp" variable
+                       (:constant-flag t
+                        :default-value (3538 3547)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3515 3547])
+                    ("MSGTYPE_GrpTmp" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3549 3564])
+                    ("AbsMsgType_DisTmp" variable
+                       (:constant-flag t
+                        :default-value (3602 3616)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3576 3616])
+                    ("AbsMsgType_PubGroupTmp" variable
+                       (:constant-flag t
+                        :default-value (3654 3673)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3628 3673])
+                    ("AbsMsgType_QQSearchBusiTmp" variable
+                       (:constant-flag t
+                        :default-value (3714 3737)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3685 3737]))                  
+                :type "enum")
+                nil [3225 3748])
+            ("NodeStruct" type
+               (:members 
+                  ( ("uin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3774 3787])
+                    ("touin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3792 3807])
+                    ("time" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3812 3826]))                  
+                :type "struct")
+                nil [3750 3829])
+            ("g_TransBuf" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [3832 3865])
+            ("g_TransBufCur" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "g_TransBuf"
+                :type "char")
+                nil [3952 3992])
+            ("g_TransMsgCnt" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [3993 4027])
+            ("GetUrlFromMsg" function
+               (:pointer 1
+                :parent "MobileMsg_UnifiedFilter"
+                :constant-flag t
+                :arguments 
+                  ( ("urlLen" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4245 4262]))                  
+                :type "char")
+                nil [4194 4552])
+            ("IsFriendMsg" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :type "bool")
+                nil [4554 4874])
+            ("IsTempSession" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :type "bool")
+                nil [4876 5195])
+            ("GetC2cServiceType" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("c2ctype" variable
+                       (:reference 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5245 5262])
+                    ("service_type" variable
+                       (:reference 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5263 5285]))                  
+                :type "void")
+                nil [5197 5763])
+            ("GetAbsMsgType" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [5765 6770])
+            ("MobileMsg_UnifiedFilter" function
+               (:constructor-flag t
+                :parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6821 6837])
+                    ("buflen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6838 6854]))                  
+                :type ("MobileMsg_UnifiedFilter" type (:type "class") nil nil))
+                nil [6772 7574])
+            ("DecodeRequest" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7619 7635])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7636 7650]))                  
+                :type "int")
+                nil [7576 13458])
+            ("EncodeResp" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13500 13510])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13511 13525])
+                    ("beat_result" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13526 13547])
+                    ("url" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13548 13564]))                  
+                :type "int")
+                nil [13460 16136])
+            ("OnStateInit" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16179 16199])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16200 16223]))                  
+                :type "int")
+                nil [16138 18029])
+            ("OnStateFini_" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18073 18093])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18094 18117]))                  
+                :type "int")
+                nil [18031 18496])
+            ("DecodeMsgContext" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :type "int")
+                nil [18498 24322])
+            ("SetData_Fini" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :type "int")
+                nil [24324 30131])
+            ("Filter" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30169 30189])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30190 30213]))                  
+                :type "int")
+                nil [30133 41844])
+            ("FilterFini" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :type "int")
+                nil [41846 50291])
+            ("SetData_ForwardLogin" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50351 50371])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50372 50395]))                  
+                :type "int")
+                nil [50301 52646])
+            ("SetData_Forward" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52701 52721])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52722 52745]))                  
+                :type "int")
+                nil [52656 58317])
+            ("DetailFilter_Normal" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58382 58402])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58403 58426]))                  
+                :type "int")
+                nil [58333 64095])
+            ("DetailFilter_Bless" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64155 64175])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64176 64199]))                  
+                :type "int")
+                nil [64107 65132])
+            ("StartQueryTemp" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65230 65250])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65251 65274]))                  
+                :type "int")
+                nil [65186 67780])
+            ("StartQueryByContext" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67853 67873])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67874 67897]))                  
+                :type "int")
+                nil [67804 69341])
+            ("StartQueryTianXiang" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69399 69419])
+                    ("pActionSet" variable
+                       (:pointer 1
+                        :type ("CActionSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69420 69443]))                  
+                :type "int")
+                nil [69350 70006])
+            ("Encode4C2cSingle" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("pFrame" variable
+                       (:pointer 1
+                        :type ("CAsyncFrame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70054 70074])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [70075 70085])
+                    ("len" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [70086 70095])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70096 70111]))                  
+                :type "int")
+                nil [70008 70650])
+            ("Encode4ForwardSig" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [70699 70712])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70713 70727])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70728 70743]))                  
+                :type "int")
+                nil [70652 72034])
+            ("Encode4CheckVideoCover" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [72097 72110])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72111 72125])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72126 72141]))                  
+                :type "int")
+                nil [72045 72915])
+            ("Encode4MsgStat" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [72961 72974])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72975 72989])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72990 73005]))                  
+                :type "int")
+                nil [72917 74340])
+            ("Encode4AccountCheat" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [74391 74404])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74405 74419])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74420 74435]))                  
+                :type "int")
+                nil [74342 75690])
+            ("Encode4AntiCheat" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [75738 75751])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75752 75766])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75767 75782]))                  
+                :type "int")
+                nil [75692 77075])
+            ("Encode4TempSession" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [77154 77167])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77168 77182])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77183 77198]))                  
+                :type "int")
+                nil [77106 78741])
+            ("Encode4PCTempSession" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [78821 78834])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78835 78849])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78850 78865]))                  
+                :type "int")
+                nil [78771 80415])
+            ("Encode4UrlMirror" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [80470 80483])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80484 80498])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80499 80514]))                  
+                :type "int")
+                nil [80424 82123])
+            ("Encode4LogUrl" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [82218 82231])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82232 82246])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82247 82262]))                  
+                :type "int")
+                nil [82175 84646])
+            ("Encode4IpcDays" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [84692 84705])
+                    ("buflen" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84706 84723])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84724 84739]))                  
+                :type "int")
+                nil [84648 85798])
+            ("Encode4RichMsg" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [85872 85885])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [85886 85900])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [85901 85916]))                  
+                :type "int")
+                nil [85828 86854])
+            ("ConvertFromLogicResult" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("logicResult" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86913 86934]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [86856 87275])
+            ("Encode4_c2c_srt" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [87322 87335])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87336 87350])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87351 87366]))                  
+                :type "int")
+                nil [87277 88846])
+            ("Encode_c2cfilter" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [88894 88907])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [88908 88922])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [88923 88938]))                  
+                :type "int")
+                nil [88848 90418])
+            ("SaveReply_c2cfilter" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("beat_personal" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [90469 90492])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [90493 90508]))                  
+                :type "int")
+                nil [90420 90634])
+            ("Encode_ShareMsg" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [90681 90694])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [90695 90709])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [90710 90725]))                  
+                :type "int")
+                nil [90636 92625])
+            ("SaveReply_ShareMsg" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("beat_personal" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [92675 92698])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92699 92714]))                  
+                :type "int")
+                nil [92627 93056])
+            ("Encode_ArkMsg" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("outbuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [93101 93114])
+                    ("len" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93115 93129])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93130 93145]))                  
+                :type "int")
+                nil [93058 94908])
+            ("SaveReply_ArkMsg" function
+               (:parent "MobileMsg_UnifiedFilter"
+                :arguments 
+                  ( ("beat_personal" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94956 94979])
+                    ("pMsg" variable
+                       (:pointer 1
+                        :type ("CMsgBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [94980 94995]))                  
+                :type "int")
+                nil [94910 95677]))          
+      :file "MobileMsg_UnifiedFilter.cpp"
+      :pointmax 95679
+      :fsize 99174
+      :lastmodtime '(23096 47901 0 0)
+      :unmatched-syntax '((punctuation 3950 . 3951) (semantic-list 3938 . 3950) (SIZEOF 3932 . 3938) (punctuation 3930 . 3931) (symbol 3919 . 3929) (punctuation 3918 . 3919) (symbol 3904 . 3917) (CONST 3898 . 3903) (punctuation 3897 . 3898) (CHAR 3892 . 3896) (STATIC 3885 . 3891) (punctuation 3548 . 3549) (punctuation 3547 . 3548) (punctuation 3486 . 3487) (punctuation 3485 . 3486) (punctuation 3423 . 3424) (punctuation 3422 . 3423) (punctuation 3362 . 3363) (punctuation 3361 . 3362) (punctuation 3304 . 3305) (punctuation 3303 . 3304))
+      :lexical-table 
+        '(("ACTIVEINDEX" . 
+              ((symbol "resultsBuf" 1342 . 1352) (punctuation "." 1352 . 1353) (symbol "stat2" 1353 . 1358) (punctuation "." 1358 . 1359) (symbol "resultEvilUin" 1359 . 1372) (punctuation "." 1372 . 1373) (symbol "active_index" 1373 . 1385)))
+          ("STOLENINDEX" . 
+              ((symbol "resultsBuf" 1406 . 1416) (punctuation "." 1416 . 1417) (symbol "stat2" 1417 . 1422) (punctuation "." 1422 . 1423) (symbol "resultEvilUin" 1423 . 1436) (punctuation "." 1436 . 1437) (symbol "stolen_index" 1437 . 1449)))
+          ("MSG_HAS_URL_RICH" . ((semantic-list "(m_contextflag & MsgCtxFlag_Rich || TEXT_HAS_URL)" 1770 . 1819)))
+          ("FEEDINDEX" . 
+              ((symbol "resultsBuf" 1528 . 1538) (punctuation "." 1538 . 1539) (symbol "stat2" 1539 . 1544) (punctuation "." 1544 . 1545) (symbol "resultEvilUin" 1545 . 1558) (punctuation "." 1558 . 1559) (symbol "report_index" 1559 . 1571)))
+          ("TEXT_HAS_URL" . ((semantic-list "(m_ctxflag2 & MsgCtxFlagOther_url)" 1603 . 1637)))
+          ("EVILINDEX" . 
+              ((symbol "resultsBuf" 1468 . 1478) (punctuation "." 1478 . 1479) (symbol "stat2" 1479 . 1484) (punctuation "." 1484 . 1485) (symbol "resultEvilUin" 1485 . 1498) (punctuation "." 1498 . 1499) (symbol "evil_index" 1499 . 1509)))
+          ("TEXT_HAS_STRANGE_URL" . ((semantic-list "(m_ctxflag2 & MsgCtxFlagOther_strangeUrl)" 1685 . 1726)))
+          )
+)
+    (semanticdb-table "MobileMsg_UnifiedFilter.h"
+      :file "MobileMsg_UnifiedFilter.h"
+      :fsize 6927
+      :lastmodtime '(23096 47901 0 0))
+    (semanticdb-table "ModConfig.h"
+      :file "ModConfig.h"
+      :fsize 913
+      :lastmodtime '(22747 17739 0 0))
+    (semanticdb-table "InternalHelper.h"
+      :file "InternalHelper.h"
+      :fsize 12062
+      :lastmodtime '(22747 17714 0 0))
+    (semanticdb-table "CommonActions.h"
+      :file "CommonActions.h"
+      :fsize 506
+      :lastmodtime '(22747 17713 0 0))
+    (semanticdb-table "proto_head.h"
+      :file "proto_head.h"
+      :fsize 957
+      :lastmodtime '(22747 17736 0 0))
+    (semanticdb-table "ActionReportUrl.h"
+      :file "ActionReportUrl.h"
+      :fsize 945
+      :lastmodtime '(22747 17718 0 0))
+    (semanticdb-table "ProtoForwardSig.h"
+      :file "ProtoForwardSig.h"
+      :fsize 747
+      :lastmodtime '(22747 17737 0 0))
+    (semanticdb-table "ActionForwardSig.h"
+      :file "ActionForwardSig.h"
+      :fsize 947
+      :lastmodtime '(22747 17739 0 0))
+    (semanticdb-table "ActionCheckVideoCover.h"
+      :file "ActionCheckVideoCover.h"
+      :fsize 1213
+      :lastmodtime '(22747 17712 0 0))
+    (semanticdb-table "ActionMsgStat.h"
+      :file "ActionMsgStat.h"
+      :fsize 1114
+      :lastmodtime '(22747 17735 0 0))
+    (semanticdb-table "ParseMsgPack.h"
+      :file "ParseMsgPack.h"
+      :fsize 235
+      :lastmodtime '(22747 17715 0 0))
+    (semanticdb-table "Helper.h"
+      :file "Helper.h"
+      :fsize 5118
+      :lastmodtime '(22747 17715 0 0))
+    (semanticdb-table "EvilSeed.h"
+      :file "EvilSeed.h"
+      :fsize 1489
+      :lastmodtime '(22747 17738 0 0))
+    (semanticdb-table "proto0x211.h"
+      :file "proto0x211.h"
+      :fsize 759
+      :lastmodtime '(22747 17718 0 0))
+    (semanticdb-table "ActionAccountCheat.h"
+      :file "ActionAccountCheat.h"
+      :fsize 1024
+      :lastmodtime '(22747 17718 0 0))
+    (semanticdb-table "url_extract.h"
+      :file "url_extract.h"
+      :fsize 265
+      :lastmodtime '(22747 17730 0 0))
+    (semanticdb-table "ActionLog2DB_new.h"
+      :file "ActionLog2DB_new.h"
+      :fsize 4154
+      :lastmodtime '(22747 17735 0 0))
+    (semanticdb-table "AccountIdentifierUtf8.h"
+      :file "AccountIdentifierUtf8.h"
+      :fsize 4631
+      :lastmodtime '(22747 17731 0 0))
+    (semanticdb-table "ActionC2cFilter.h"
+      :file "ActionC2cFilter.h"
+      :fsize 1331
+      :lastmodtime '(22747 17714 0 0))
+    (semanticdb-table "ActionShareMsg.h"
+      :file "ActionShareMsg.h"
+      :fsize 1329
+      :lastmodtime '(22747 17713 0 0))
+    (semanticdb-table "check_zhifubao_token.h"
+      :file "check_zhifubao_token.h"
+      :fsize 155
+      :lastmodtime '(22747 17739 0 0))
+    (semanticdb-table "general_action.h"
+      :file "general_action.h"
+      :fsize 1017
+      :lastmodtime '(22747 17721 0 0))
+    (semanticdb-table "ActionArkMsg.h"
+      :file "ActionArkMsg.h"
+      :fsize 1325
+      :lastmodtime '(23096 47901 0 0)))
+  :file "!drive_z!code_root!c2cmsg_receiver_2011_proj!trunk!mqq_service2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

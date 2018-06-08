@@ -1,0 +1,74 @@
+;; Object hrtx_clone_blackuin/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hrtx_clone_blackuin/"
+  :tables
+  (list
+    (semanticdb-table "hrtx_clone_blackuin_api.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("hash_template.h" include nil nil [1 27])
+            ("hrtx_clone_blackuin_api.h" include nil nil [28 64])
+            ("BLACK_UIN_SHM_KEY" variable (:constant-flag t) nil [74 91])
+            ("BLACK_UIN_SHM_LENGTH" variable (:constant-flag t) nil [110 130])
+            ("BLACK_UIN_SHM_TIME" variable (:constant-flag t) nil [145 163])
+            ("BLACK_UIN" type
+               (:members 
+                  ( ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [207 222]))                  
+                :type "struct")
+                nil [184 225])
+            ("BlackUin" type
+               (:typedef ("CHashTable" type
+                     (:template-specifier 
+                        ( ("BLACK_UIN" type nil nil nil)
+                          ("uint32_t" type nil nil nil)
+                          ("80000")
+                          ("20"))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [241 332])
+            ("g_stBlackUin" variable
+               (:typemodifiers ("static")
+                :type ("BlackUin" type (:type "class") nil nil))
+                nil [333 362])
+            ("g_bIsInited" variable
+               (:typemodifiers ("static")
+                :default-value "false"
+                :type "bool")
+                nil [363 395])
+            ("HrtxCloneBlackUin_Init" function (:type "int") nil [397 649])
+            ("HrtxCloneBlackUin_Check" function
+               (:arguments 
+                  ( ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [680 695]))                  
+                :type "bool")
+                nil [651 902])
+            ("HrtxCloneBlackUin_Set" function
+               (:arguments 
+                  ( ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [930 945]))                  
+                :type "int")
+                nil [904 1241])
+            ("HrtxCloneBlackUin_Clear" function
+               (:arguments 
+                  ( ("dwUin" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1271 1286]))                  
+                :type "int")
+                nil [1243 1484])
+            ("HrtxCloneBlackUin_ClearAll" function (:type "int") nil [1486 1615])
+            ("HrtxCloneBlackUin_GetCount" function (:type ("uint32_t" type (:type "class") nil nil)) nil [1617 2078]))          
+      :file "hrtx_clone_blackuin_api.cpp"
+      :pointmax 2079
+      :fsize 2078
+      :lastmodtime '(23135 4905 0 0)
+      :unmatched-syntax '((semantic-list 238 . 240) (symbol 234 . 238) (symbol 227 . 233) (punctuation 226 . 227) (semantic-list 180 . 183) (symbol 176 . 180) (number 181 . 182) (symbol 169 . 175) (number 181 . 182) (punctuation 168 . 169))
+      :lexical-table 
+        '(("BLACK_UIN_SHM_LENGTH" . ((number "80000" 131 . 136)))
+          ("BLACK_UIN_SHM_KEY" . ((number "0x2700400" 92 . 101)))
+          ("BLACK_UIN_SHM_TIME" . ((number "20" 164 . 166)))
+          )
+)
+    (semanticdb-table "hrtx_clone_blackuin_api.h"
+      :file "hrtx_clone_blackuin_api.h"
+      :fsize 348
+      :lastmodtime '(23135 4905 0 0)))
+  :file "!drive_e!code_root!imsec_buin_protect_proj!trunk!hrtx_clone_blackuin!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

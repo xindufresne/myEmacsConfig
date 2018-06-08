@@ -1,0 +1,68 @@
+;; Object db_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "db_test/"
+  :tables
+  (list
+    (semanticdb-table "skgdb_test_static_build_table.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("gtest/gtest.h" include nil nil [41 65])
+            ("skgdb/StarKnowledgeGraphDatabase.h" include nil nil [67 112])
+            ("skgdb_test_basic.hpp" include nil nil [113 144])
+            ("DBLP_2011" variable (:constant-flag t) nil [174 183])
+            ("SKGDBTestStaticBuildTable" type
+               (:superclasses 
+                  ( ("SKGDBTestWithPreloadGraph" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("protected" label nil (reparse-symbol classsubparts) [332 342])
+                    ("GetTestFile" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [755 844])
+                    ("GetFileType" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [849 914])
+                    ("GetNumEdges" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [919 992])
+                    ("GetNumVertices" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [997 1068]))                  
+                :type "class")
+                nil [264 2329])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("SKGDBTestStaticBuildTable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2411 2437])
+                    ("" variable (:type ("BuildTable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2438 2449]))                  
+                :type "int")
+                nil [2404 3016])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("SKGDBTestStaticBuildTable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3066 3092])
+                    ("" variable (:type ("GetOutEdgesNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3093 3108]))                  
+                :type "int")
+                nil [3059 3617])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("SKGDBTestStaticBuildTable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3715 3741])
+                    ("" variable (:type ("GetOutEdges" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3742 3754]))                  
+                :type "int")
+                nil [3708 3840])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("SKGDBTestStaticBuildTable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3889 3915])
+                    ("" variable (:type ("GetInEdgesNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3916 3930]))                  
+                :type "int")
+                nil [3882 4473])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("SKGDBTestStaticBuildTable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4569 4595])
+                    ("" variable (:type ("GetInEdges" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4596 4607]))                  
+                :type "int")
+                nil [4562 4692]))          
+      :file "skgdb_test_static_build_table.cpp"
+      :pointmax 4760
+      :fsize 5011
+      :lastmodtime '(23243 19707 563152 86000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DBLP_2011")
+          )
+))
+  :file "!home!tommydu!code_root!StarKnowledgeGraph!unittest!db_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

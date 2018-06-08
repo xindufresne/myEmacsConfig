@@ -1,0 +1,53 @@
+;; Object test_cpp_emacs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test_cpp_emacs/"
+  :tables
+  (list
+    (semanticdb-table "test.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 18])
+            ("stdlib.h" include (:system-flag t) nil [19 37])
+            ("string.h" include (:system-flag t) nil [38 56])
+            ("my" type
+               (:members 
+                  ( ("id" variable (:type "int") (reparse-symbol classsubparts) [70 77])
+                    ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [80 94])
+                    ("reserver" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [97 114]))                  
+                :type "struct")
+                nil [57 117])
+            ("max" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [126 132])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [132 138]))                  
+                :type "int")
+                nil [118 160]))          
+      :file "test.h"
+      :pointmax 161
+      :fsize 172
+      :lastmodtime '(23070 31159 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "test.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("test.h" include nil nil [1 18])
+            ("stdlib.h" include (:system-flag t) nil [19 37])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [38 58])
+            ("main" function (:type "int") nil [60 189]))          
+      :file "test.cpp"
+      :pointmax 190
+      :fsize 211
+      :lastmodtime '(23071 44427 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_z!code_root!c2cmsg_receiver_2011_proj!trunk!buluo!sch_com_sec!test_cpp_emacs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

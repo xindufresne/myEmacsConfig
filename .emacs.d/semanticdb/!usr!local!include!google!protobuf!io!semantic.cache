@@ -1,0 +1,519 @@
+;; Object io/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "io/"
+  :tables
+  (list
+    (semanticdb-table "coded_stream.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("GOOGLE_PROTOBUF_IO_CODED_STREAM_H__" variable (:constant-flag t) nil [4843 4878])
+            ("assert.h" include (:system-flag t) nil [4880 4899])
+            ("climits" include (:system-flag t) nil [4900 4918])
+            ("string" include (:system-flag t) nil [4919 4936])
+            ("utility" include (:system-flag t) nil [4937 4955])
+            ("sys/param.h" include (:system-flag t) nil [5376 5400])
+            ("google/protobuf/stubs/atomicops.h" include (:system-flag t) nil [5675 5719])
+            ("google/protobuf/stubs/common.h" include (:system-flag t) nil [5720 5761])
+            ("google/protobuf/stubs/port.h" include (:system-flag t) nil [5762 5801])
+            ("google/protobuf/stubs/port.h" include (:system-flag t) nil [5802 5841])
+            ("google" type
+               (:members 
+                  ( ("protobuf" type
+                       (:members 
+                          ( ("DescriptorPool" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [5885 5906])
+                            ("MessageFactory" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [5907 5928])
+                            ("internal" type
+                               (:members 
+                                  ( ("MapTestForceDeterministic" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5951 5984]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [5930 5986])
+                            ("io" type
+                               (:members 
+                                  ( ("CodedInputStream" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [6029 6052])
+                                    ("CodedOutputStream" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [6053 6077])
+                                    ("ZeroCopyInputStream" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [6106 6132])
+                                    ("ZeroCopyOutputStream" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [6165 6192])
+                                    ("CodedInputStream" variable (:type ("LIBPROTOBUF_EXPORT" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [6657 29631])
+                                    ("CodedOutputStream" variable (:type ("LIBPROTOBUF_EXPORT" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [31928 42819])
+                                    ("ReadVarint32" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable
+                                               (:pointer 1
+                                                :type ("uint32" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [43036 43050]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [42993 43329])
+                                    ("ReadVarint64" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable
+                                               (:pointer 1
+                                                :type ("uint64" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [43374 43388]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [43331 43616])
+                                    ("ReadVarintSizeAsInt" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable
+                                               (:pointer 1
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [43668 43679]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [43618 43906])
+                                    ("ReadLittleEndian32FromArray" function
+                                       (:pointer 1
+                                        :parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("buffer" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [43989 44009])
+                                            ("value" variable
+                                               (:pointer 1
+                                                :type ("uint32" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [44014 44028]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [43918 44397])
+                                    ("ReadLittleEndian64FromArray" function
+                                       (:pointer 1
+                                        :parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("buffer" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [44479 44499])
+                                            ("value" variable
+                                               (:pointer 1
+                                                :type ("uint64" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [44504 44518]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [44408 45228])
+                                    ("ReadLittleEndian32" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable
+                                               (:pointer 1
+                                                :type ("uint32" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [45279 45293]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [45230 45606])
+                                    ("ReadLittleEndian64" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable
+                                               (:pointer 1
+                                                :type ("uint64" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [45657 45671]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [45608 45984])
+                                    ("ReadTagNoLastTag" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type ("uint32" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [45986 46228])
+                                    ("ReadTagWithCutoffNoLastTag" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("cutoff" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46311 46325]))                                          
+                                        :type ("std::pair" type
+                                             (:template-specifier 
+                                                ( ("uint32" type nil nil nil)
+                                                  ("bool" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol namespacesubparts) [46230 48251])
+                                    ("LastTagWas" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("expected" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [48294 48310]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [48253 48346])
+                                    ("ConsumedEntireMessage" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [48348 48439])
+                                    ("ExpectTag" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("expected" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [48481 48497]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [48441 49052])
+                                    ("ExpectTagFromArray" function
+                                       (:pointer 1
+                                        :parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("buffer" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [49116 49136])
+                                            ("expected" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49137 49153]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [49054 49455])
+                                    ("GetDirectBufferPointerInline" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("data" variable
+                                               (:pointer 2
+                                                :constant-flag t
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [49516 49534])
+                                            ("size" variable
+                                               (:pointer 1
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [49594 49604]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [49457 49678])
+                                    ("ExpectAtEnd" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [49680 50183])
+                                    ("CurrentPosition" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [50185 50313])
+                                    ("GetDirectBufferForNBytesAndAdvance" function
+                                       (:pointer 1
+                                        :parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [50383 50392]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [50315 50524])
+                                    ("WriteVarint32ToArray" function
+                                       (:pointer 1
+                                        :parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50580 50593])
+                                            ("target" variable
+                                               (:pointer 1
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [50648 50662]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [50526 50835])
+                                    ("WriteVarint64ToArray" function
+                                       (:pointer 1
+                                        :parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50891 50904])
+                                            ("target" variable
+                                               (:pointer 1
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [50959 50973]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [50837 51146])
+                                    ("WriteVarint32SignExtended" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51205 51217]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [51148 51266])
+                                    ("WriteVarint32SignExtendedToArray" function
+                                       (:pointer 1
+                                        :parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51339 51351])
+                                            ("target" variable
+                                               (:pointer 1
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [51352 51366]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [51268 51437])
+                                    ("WriteLittleEndian32ToArray" function
+                                       (:pointer 1
+                                        :parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51499 51512])
+                                            ("target" variable
+                                               (:pointer 1
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [51573 51587]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [51439 51896])
+                                    ("WriteLittleEndian64ToArray" function
+                                       (:pointer 1
+                                        :parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51958 51971])
+                                            ("target" variable
+                                               (:pointer 1
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [52032 52046]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [51898 52634])
+                                    ("WriteVarint32" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52681 52694]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [52636 53066])
+                                    ("WriteVarint64" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53113 53126]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [53068 53499])
+                                    ("WriteTag" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53541 53554]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [53501 53582])
+                                    ("WriteTagToArray" function
+                                       (:pointer 1
+                                        :parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53638 53651])
+                                            ("target" variable
+                                               (:pointer 1
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [53652 53666]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [53584 53716])
+                                    ("VarintSize32" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53764 53777]))                                          
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [53718 54146])
+                                    ("VarintSize64" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("uint64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54194 54207]))                                          
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [54148 54578])
+                                    ("VarintSize32SignExtended" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54638 54650]))                                          
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [54580 54809])
+                                    ("WriteString" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("str" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [54854 54872]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [54811 54930])
+                                    ("WriteRawMaybeAliased" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("data" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [54989 55006])
+                                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [55007 55016]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [54932 55121])
+                                    ("WriteStringToArray" function
+                                       (:pointer 1
+                                        :parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("str" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [55180 55198])
+                                            ("target" variable
+                                               (:pointer 1
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [55199 55213]))                                          
+                                        :type ("uint8" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [55123 55293])
+                                    ("ByteCount" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [55295 55384])
+                                    ("Advance" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("amount" variable (:type "int") (reparse-symbol arg-sub-list) [55424 55435]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [55386 55460])
+                                    ("Advance" function
+                                       (:parent "CodedOutputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("amount" variable (:type "int") (reparse-symbol arg-sub-list) [55501 55512]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [55462 55563])
+                                    ("SetRecursionLimit" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("limit" variable (:type "int") (reparse-symbol arg-sub-list) [55613 55623]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [55565 55704])
+                                    ("IncrementRecursionDepth" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [55706 55821])
+                                    ("DecrementRecursionDepth" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [55823 55947])
+                                    ("UnsafeDecrementRecursionDepth" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [55949 56085])
+                                    ("SetExtensionRegistry" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("pool" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("DescriptorPool" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [56138 56165])
+                                            ("factory" variable
+                                               (:pointer 1
+                                                :type ("MessageFactory" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [56217 56241]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [56087 56303])
+                                    ("GetExtensionPool" function
+                                       (:pointer 1
+                                        :parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("DescriptorPool" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [56305 56400])
+                                    ("GetExtensionFactory" function
+                                       (:pointer 1
+                                        :parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type ("MessageFactory" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [56402 56497])
+                                    ("BufferSize" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [56499 56600])
+                                    ("CodedInputStream" function
+                                       (:constructor-flag t
+                                        :parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("input" variable
+                                               (:pointer 1
+                                                :type ("ZeroCopyInputStream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [56644 56671]))                                          
+                                        :type ("CodedInputStream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [56602 57265])
+                                    ("CodedInputStream" function
+                                       (:constructor-flag t
+                                        :parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("buffer" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("uint8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [57309 57329])
+                                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [57330 57339]))                                          
+                                        :type ("CodedInputStream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [57267 58000])
+                                    ("IsFlat" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [58002 58075])
+                                    ("Skip" function
+                                       (:parent "CodedInputStream"
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [58112 58122]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [58077 58439]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [5988 58442]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5863 58461]))                  
+                :type "namespace")
+                nil [5843 58650]))          
+      :file "coded_stream.h"
+      :pointmax 58719
+      :fsize 58718
+      :lastmodtime '(23266 20460 436185 143000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GOOGLE_PROTOBUF_IO_CODED_STREAM_H__")
+          )
+))
+  :file "!usr!local!include!google!protobuf!io!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,48 @@
+;; Object HelloWorld/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "HelloWorld/"
+  :tables
+  (list
+    (semanticdb-table "helloWorld.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 19])
+            ("stdio.h" include (:system-flag t) nil [20 37])
+            ("string" include (:system-flag t) nil [38 54])
+            ("iostream" include (:system-flag t) nil [55 73])
+            ("vector" include (:system-flag t) nil [74 90])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [100 105]))                  
+                :type "int")
+                nil [91 922]))          
+      :file "helloWorld.cpp"
+      :pointmax 953
+      :fsize 1132
+      :lastmodtime '(23246 16875 29090 425000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ls.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("dirent.h" include (:system-flag t) nil [20 39])
+            ("fcntl.h" include (:system-flag t) nil [40 58])
+            ("string.h" include (:system-flag t) nil [59 78])
+            ("unistd.h" include (:system-flag t) nil [79 98])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [108 117])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [117 129]))                  
+                :type "int")
+                nil [99 952]))          
+      :file "ls.cc"
+      :pointmax 953
+      :fsize 952
+      :lastmodtime '(23311 16782 103791 495000)
+      :unmatched-syntax nil))
+  :file "!home!tommydu!code_root!HelloWorld!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

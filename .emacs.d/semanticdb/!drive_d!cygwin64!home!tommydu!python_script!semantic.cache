@@ -1,0 +1,18 @@
+;; Object python_script/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python_script/"
+  :tables
+  (list
+    (semanticdb-table "getPicFromUrl.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("urllib" include nil nil [1 31])
+            ("urlretrieve" code nil nil [32 154]))          
+      :file "getPicFromUrl.py"
+      :pointmax 156
+      :fsize 161
+      :lastmodtime '(23076 55250 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_d!cygwin64!home!tommydu!python_script!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
